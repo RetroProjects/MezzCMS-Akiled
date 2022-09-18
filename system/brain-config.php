@@ -84,7 +84,6 @@
 	$config['recaptchaSiteKeyEnable'] = false;
 
 	/* App */
-
 	$config['urlApp'] = "https://google.com";
 	$config['urlAppWindows'] = "https://www.microsoft.com/pt-br/software-download/windows11";
 	$config['urlAppMac'] = "https://support.apple.com/pt_BR/downloads/macos";
