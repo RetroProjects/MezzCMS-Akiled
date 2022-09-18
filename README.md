@@ -24,3 +24,7 @@ Es un reemplazo para aquellos que quieren una opción diferente a la plantilla S
 * Codificando el CMS para Akiled - <a href="https://github.com/DevHabbos">Kaio (*DevHabbos*)</a>
 * Diseño Mezz CMS - <a href="https://github.com/yilmazev">Yilmaz</a>
 * Emulador Akiled y otros - <a href="https://github.com/Dark25">Lúcifer</a>
+
+### Discord Recursos Holos
+
+* <a href="https://discord.gg/5wBCvuB9d8">https://discord.gg/5wBCvuB9d8</a>
