@@ -14,6 +14,10 @@ Es un reemplazo para aquellos que quieren una opción diferente a la plantilla S
 * Página de Clasificación
 * Tienda de venta de VIP, lotería y placas
 * Preguntas frecuentes (FAQ)
+* Organización del HK
+* Eliminando sistemas inútiles de HK
+* Sistemas de Fansite incluidos en HK
+* Sistema de información de índice incluido en HK
 
 ### Créditos para
 
