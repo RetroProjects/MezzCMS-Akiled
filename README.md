@@ -14,3 +14,9 @@ Es un reemplazo para aquellos que quieren una opción diferente a la plantilla S
 * Página de Clasificación
 * Tienda de venta de VIP, lotería y placas
 * Preguntas frecuentes (FAQ)
+
+### Créditos para
+
+* Codificando el CMS para Akiled - <a href="https://github.com/DevHabbos">Kaio (*DevHabbos*)</a>
+* Diseño Mezz CMS - <a href="https://github.com/yilmazev">Yilmaz</a>
+* Emulador Akiled y otros - <a href="https://github.com/Dark25">Lúcifer</a>
