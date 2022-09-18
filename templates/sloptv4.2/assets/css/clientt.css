@@ -1,0 +1,156 @@
+@import url("ubuntu.css");
+
+body{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-family: Arial;
+}
+
+.salas {
+    margin-left: 13%;
+    width: 790px;
+}
+
+.title {
+    font-size: 40px;
+    font-family: ubuntu;
+    margin-left: 15%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+#boutiqueref {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+    top: 0px;
+    display: none;
+    z-index: 5;
+    background: url(../images/bgclient2.png) no-repeat, url(../images/bgclientright.png) no-repeat, url(../images/bgclient.png);
+    background-position: left bottom, right bottom;
+}
+#boutiqueload {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+    top: 0px;
+    display: none;
+    z-index: 5;
+    background: url(../images/bgclient2.png) no-repeat, url(../images/bgclientright.png) no-repeat, url(../images/bgclient.png);
+    background-position: left bottom, right bottom;
+}
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  position: relative;
+  top: 16px;
+  right: 0;
+  left: 0;
+  height: 40px;
+  width: 10px;
+  transition: all 0.15s ease-out 0s;
+  background: #d4d4d4;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #cecece;
+}
+.option-input:checked {
+  background: #000000;
+  opacity: 1 !important;
+  animation: skew 2s infinite;
+  transform: skew(50deg);
+  animation-direction: alternate;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 2px;
+  position: absolute;
+  top: 10px;
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 20px;
+  left: 10px;
+}
+
+.option-input.radio {
+  border-radius: 50%;
+  width: 20px !important;
+  height: 20px !important;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+.register-banner__button {
+    box-shadow: 0 3px 0 1px rgba(0,0,0,.3);
+    display: inline-block;
+    line-height: 1.2;
+    text-align: center;
+    background-color: #00813e;
+    border-color: #8eda55;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border-width: 2px;
+    font-family:  arial;
+    border-style: solid;
+    margin-bottom: 4px;
+    width: 200px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Logo {
+    background: url(../images/Habbo.png) 10% no-repeat;
+    height: 25px;
+    margin: 0 auto;
+    padding: 35px 0;
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: skewY(20deg);
+  }
+  100% {
+    transform: skewY(-20deg);
+  }
+}
+@keyframes skew {
+  0% {
+    transform: skewX(5deg);
+  }
+  100% {
+    transform: skewX(-5deg);
+  }
+}
+.errordiv
+{
+    background: #982a2a;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: ubuntu;
+    width: 40%;
+}

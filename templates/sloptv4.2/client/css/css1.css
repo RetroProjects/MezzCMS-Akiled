@@ -1,0 +1,382 @@
+hr{
+    margin-bottom: -8px;
+}
+.button-news {
+    width: auto;
+    min-height: fit-content;
+    bottom: 16%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-end;
+    z-index: 999999999;
+    position: fixed;
+    z-index: 0;
+}
+.scrollable-element {
+  scrollbar-color: dark;
+}
+
+.button-news .content{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+    user-select: none;
+    padding: 0rem 0rem;
+    float: left;
+    margin-top: 0.4em;
+    border-right: none;
+}
+.button-news .content-btn-util {
+    text-align: center;
+    cursor: pointer;
+    width: 30px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    bottom: 15%;
+    float: right;
+    margin-top: 0.8rem;
+}
+.button-news .content-btn-util img{
+    top: 0px;
+    right: 0px;
+}
+.button-news b {
+    color: white;
+    font-family: Ubuntu,sans-serif;
+    line-height: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.button-news .content img{
+    position: relative;
+    top: unset;
+    right: 2px;
+    width: 35px;
+    object-fit: none;
+    top: -4px;
+}
+.news-contenedor {
+	position: fixed;
+    min-width: 300px;
+    max-width: 360px;
+    height: max-content;
+    border: solid 1px #4b4b4b;
+    box-shadow: 0px 1px 3px #00000063;
+    border-radius: 3px 3px 3px 3px;
+    right: 20%;
+    bottom: 21%;
+    cursor: default;
+    font-family: Ubuntu,sans-serif;
+    line-height: unset;
+    font-size: 13px;
+    color: rgb(179 177 177);
+    background: #000000f0;
+}
+.news-contenedor header {
+    padding: 0.7rem;
+    text-align: center;
+    background: #1c1c208a;
+    border-bottom: 2px solid #000000;
+    box-shadow: 0 2px #4a4747;
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 3px 3px 0px 0px;
+    font-weight: 300;
+    user-select: none;
+    color: #f5efef;
+    text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    font-size: calc(1rem + .15vw);
+    font-family: var(--bs-body-font-family);
+    font-weight: var(--bs-body-font-weight);
+}
+.retos{padding: 0.5rem 0.8rem;}
+.retos article{
+    height: 66px;
+    background: #cdd3d9;
+    border: solid 2px #b6bec5;
+    margin: 3px;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+}
+.retos article:hover, .retos article:active,.retos article:focus{
+    background: #ececec;
+    border: solid 2px #ffffff;
+}
+.retos article img{
+    height: 90%;
+    width: 50px;
+    object-fit: scale-down;
+    margin-right: 6px;
+    margin-left: 5px;
+}
+.retos article span{
+    padding-top: 0.3rem;
+
+}
+.retos img {
+    position: relative;
+    top: 5px;
+}
+
+.descripcion-retos-content{
+    display: flex;
+    border-radius: 2px;
+    width: 95%;
+}
+.descripcion-retos-logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.descripcion-retos-desc{
+    padding: 0rem 0.3rem;
+    padding-top: 0.3rem;
+}
+.contenido{
+    overflow: overlay;
+    height: 355px;
+    grid-gap: 2.5rem!important;
+    gap: 0.5rem!important;
+    border-left-style: outset;
+    border-right-style: outset;
+    border: solid 1px #787878;
+}
+
+.title-reto{
+    padding-top: 0.3rem;
+}
+.boton-cerrar {
+    cursor: pointer;
+    padding: 1px 3px;
+    line-height: 1;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 1.1px #fff;
+    border: 2px solid #921911;
+    background: repeating-linear-gradient(#f55041,#f55041 50%,#c23027 0,#c23027);
+    color: white;
+    right: 1rem;
+    position: absolute;
+}
+.loading {
+    width: 100%;
+    height: -webkit-fill-available;
+    background: #0000002b;
+    position: absolute;
+    margin-top: initial;
+    z-index: 1;
+}
+.desc{
+    background: #b6bec5;
+    padding: 0.5rem 1rem;
+}
+footer.ver-premios{
+    background: #b6bec5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+footer.ver-premios small{
+    margin-top: 0.5rem;
+}
+
+footer.ver-premios .premio{
+    background: #dfdfdf;
+    padding: 0.5rem 0.5rem;
+    border-radius: 2px;
+    width: 26%;
+    float:left;
+    border: solid 1px #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+footer.ver-premios .premio b{
+    margin-top: 1rem;
+    text-align: center;
+    width: 85%;
+}
+.info-btn{
+    border-radius: 6px 0px 0px 6px;
+    background: rgb(28 28 32 / 85%);
+    box-shadow: inset 0 5px rgb(34 34 39 / 7%), inset 0 -4px rgb(18 18 21 / 15%);
+    border: 2px solid rgb(23 23 23 / 33%);
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 32px;
+}
+
+.ver-estado{
+    height: 42px;
+    top: 2px !important;
+}
+.boton-mostrar{
+    padding: 0rem 1rem;
+    height: 26px;
+    border: solid 2px;
+    border-color: rgb(58 56 50);
+    box-shadow: 0px 1px 0px black;
+    background: #2a2924;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-right: 1px;
+    float: left;
+    padding-bottom: 0;
+}
+.boton-mostrar:hover{
+    border-color: rgb(58 56 50);
+    box-shadow: 0px 1px 0px black;
+    background: #2a2924f2;
+}
+.boton-mostrar img{
+    top: -5px !important;
+}
+#lista-btns{
+    justify-content: flex-end;flex-direction: column;
+}
+
+/* ----------------  */
+/* SALON DE LA FAMA  */
+/* ----------------  */
+
+.ranking{padding: 0.5rem 0.8rem;}
+.ranking article{
+    background: #cdd3d91f;
+    border: solid 2px #b6bec5;
+    margin: 3px;
+    border-radius: 2px;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding-bottom: 0rem;
+    align-content: center;
+    text-align: center;
+    float: left;
+}
+.ranking article img{
+    object-fit: scale-down;
+    top: 0;
+    width: 100%;
+}
+.ranking article span{
+    padding-top: 0rem;
+    text-align: center;
+    padding: 0px 1px;
+}
+
+.cortos{padding: 0.5rem 0.8rem;}
+.cortos article{
+    background: #a1a1a1;
+    border: solid 2px #b6bec5;
+    margin: 5px;
+    border-radius: 2px;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0rem;
+    align-content: center;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+.cortos article .desc-article{
+    position: inherit;
+    background: #000000ad;
+    height: 150px;
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -150px;
+    z-index: 1;
+}
+.cortos article .desc-article a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 11px;
+    cursor: pointer;
+    user-select:none;
+}
+.cortos article .desc-article span{
+    color: white;
+}
+.cortos article img{
+    object-fit: unset;
+    top: 0;
+    width: 266px;
+    height: 150px;
+}
+.cortos article span{
+    padding-top: 0rem;
+    text-align: center;
+    padding: 0px 1px;
+}
+.content-amount{
+    background: #377c67;
+    padding-bottom: 0.5rem;
+}
+.icon{
+    width: auto !important;
+    position: relative !important;
+    top: 4px !important;
+    margin-bottom: 4px;
+}
+.contenedor-keko{
+    margin-bottom: -15px;
+    margin-top: 0px;
+    height: 75px;
+}
+.ver-keko{
+    object-fit: none !important;
+    top: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.section{
+    width: 100%;
+    height: 155px;
+    float: initial;
+}
+
+@media (max-width: 959px) {
+    .contenido {
+        overflow: overlay;
+        height: 310px;
+    }
+}

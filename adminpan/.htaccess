@@ -1,0 +1,23 @@
+
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9_-]+)(|/)$ index.php?url=$1
+RewriteRule ^news/edit/([a-zA-Z0-9_-]+)(|/)$ index.php?url=editnews&news=$1
+RewriteRule ^news/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=news&delete=$1
+RewriteRule ^ticket/view/([a-zA-Z0-9_-]+)(|/)$ index.php?url=viewticket&ticket=$1
+RewriteRule ^ticket/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=tickets&delete=$1
+RewriteRule ^badge/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=shop&delete=$1
+RewriteRule ^badge/edit/([a-zA-Z0-9_-]+)(|/)$ index.php?url=editbagdesshop&badges=$1
+RewriteRule ^publicroom/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=publicroom&delete=$1
+RewriteRule ^publicroom/edit/([a-zA-Z0-9_-]+)(|/)$ index.php?url=editpublicroom&room=$1
+RewriteRule ^gebruiker/([a-zA-Z0-9_-]+)(|/)$ index.php?url=gebruiker&user=$1
+RewriteRule ^gebrank/([a-zA-Z0-9_-]+)(|/)$ index.php?url=gebrank&user=$1
+RewriteRule ^sollielook/([a-zA-Z0-9_-]+)(|/)$ index.php?url=sollielook&look=$1
+RewriteRule ^sollielook/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=sollielook&look=$1&delete=$1
+RewriteRule ^bans/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=bans&delete=$1
+RewriteRule ^giveuseroftheweek/([a-zA-Z0-9_-]+)(|/)$ index.php?url=giveuseroftheweek&user=$1
+RewriteRule ^cataloguesections/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=cataloguesections&delete=$1
+RewriteRule ^cataloguesections/edit/([a-zA-Z0-9_-]+)(|/)$ index.php?url=editcataloguesections&section=$1
+RewriteRule ^wordfilter/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=wordfilter&delete=$1
+RewriteRule ^rooms/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=rooms&delete=$1
+RewriteRule ^eventos/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=eventos&delete=$1
+RewriteRule ^catalogme/delete/([a-zA-Z0-9_-]+)(|/)$ index.php?url=catalogme&delete=$1

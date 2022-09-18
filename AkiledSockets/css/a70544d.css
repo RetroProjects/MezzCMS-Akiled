@@ -1,0 +1,59 @@
+.card-intro {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 272px;
+  background-size: cover;
+  margin-bottom: 1rem;
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.card-intro--discovery {
+  background-image: url(/client-nitro/img/carousel_1.a8b3587.png);
+}
+.card-intro--love {
+  background-image: url(/client-nitro/img/carousel_2.deedaa9.png);
+}
+.card-intro--animation {
+  background-image: url(/client-nitro/img/carousel_3.d2e144e.png);
+}
+.card-intro__title {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: 10px;
+  margin: 0;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.card-intro__title--discovery {
+  color: #d2bd37;
+}
+.card-intro__title--love {
+  color: #ff367a;
+}
+.card-intro__title--animation {
+  color: #1b8ed2;
+}
+.card-intro__about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+}
+.card-intro__about--discovery {
+  background-color: rgba(129, 116, 34, 0.6);
+}
+.card-intro__about--love {
+  background-color: rgba(130, 42, 72, 0.8);
+}
+.card-intro__about--animation {
+  background-color: rgba(16, 86, 127, 0.8);
+}
