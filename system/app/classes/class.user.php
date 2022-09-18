@@ -276,32 +276,6 @@
 			
 		}
 		
-		
-		public static function refUser($refUsername)
-		{
-			global $dbh, $lang;
-			$getUsernameRef = $dbh->prepare("SELECT username,ip_reg FROM users WHERE username = :username LIMIT 1");
-			$getUsernameRef->bindParam(':username', $refUsername);
-			$getUsernameRef->execute();
-			$getUsernameRefData = $getUsernameRef->fetch();
-			if ($getUsernameRef->RowCount() > 0)
-			{
-				if ($getUsernameRefData['ip_reg'] == userIp())
-				{
-					//html::error($lang["RsameIpRef"]);
-					echo 'ref_error';
-				}
-				else
-				{
-					return true;
-				}
-			}
-			else
-			{	
-				html::error($lang["RnotExist"]);
-				return false;
-			}
-		}
 		public static function login()
 		{
 			global $dbh,$config,$lang,$emuUse;

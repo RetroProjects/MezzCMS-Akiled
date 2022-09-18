@@ -1,16 +1,11 @@
+<form action="" method="post">
 <fieldset>
   <legend><?php echo $lang['Rregister']; ?></legend>
   
-  <div class="page-content-collider-content-registration-item">
+                <div class="page-content-collider-content-registration-item">
                     <label class="page-content-collider-content-registration-item-title"><?=$lang["Iusername"];?></label>
                     <p class="page-content-collider-content-registration-item-text"><?=$lang["Rdescnombre"];?></p>
                     <input type="text" name="username" id="username" onkeyup="checkUsernameOrEmail(this.value, 'username')" placeholder="<?php echo $lang['Rname']; ?>" class="page-content-collider-content-registration-item-input">
-                </div>
-
-  <div class="page-content-collider-content-registration-item">
-                    <label class="page-content-collider-content-registration-item-title"><?=$lang["Gmotto"];?></label>
-                    <p class="page-content-collider-content-registration-item-text"><?=$lang["Rdescmission"];?></p>
-                    <input type="text" class="page-content-collider-content-registration-item-input" name="motto" id="motto" placeholder="<?php echo $lang['Rmotto']; ?>" value="<?= $config['startMotto'] ?>">
                 </div>
 
                 <div class="page-content-collider-content-registration-item">
@@ -45,3 +40,4 @@
                 </div>
                 <button type="submit" name="register" id="registerSubmit" class="page-content-collider-content-registration-button"><?=$lang["Rbutton"];?></button>
 </fieldset>
+</form>
