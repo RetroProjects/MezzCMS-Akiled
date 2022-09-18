@@ -21,7 +21,7 @@
                 <div class="page-content-collider-content-profile-card-wrapper-aligner-content-friend">
 
                 <img src="https://habbo.city/habbo-imaging/avatarimage?figure=<?=filter($getUserData['look'])?>&action=std&direction=3&head_direction=3&img_format=undefined&gesture=sml&headonly=0&size=b" alt="<?=filter($getUserData['username'])?>" class="page-content-collider-content-profile-card-wrapper-aligner-content-friend-figure">
-                <p class="page-content-collider-content-profile-card-wrapper-aligner-content-friend-username"><?=filter($getUserData['look'])?></p>
+                <p class="page-content-collider-content-profile-card-wrapper-aligner-content-friend-username"><?=filter($getUserData['username'])?></p>
             </div>
 
 
