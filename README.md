@@ -19,7 +19,7 @@ Es un reemplazo para aquellos que quieren una opción diferente a la plantilla S
 * Sistemas de Fansite incluidos en HK
 * Sistema de información de índice incluido en HK
 
-### Créditos para
+### Créditos para:
 
 * Codificando el CMS para Akiled - <a href="https://github.com/DevHabbos">Kaio (*DevHabbos*)</a>
 * Diseño Mezz CMS - <a href="https://github.com/yilmazev">Yilmaz</a>
