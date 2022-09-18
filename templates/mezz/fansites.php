@@ -34,7 +34,7 @@
                                 <p class="page-content-collider-content-fansites-list-space-title" style="margin-bottom: 20px;"><?=$lang["FsDesc"]?></p>
 
                                 <?php 
-                                    $getFs = $dbh->prepare("SELECT * FROM cms_fansites c INNER JOIN users u ON c.owner = u.username");
+                                    $getFs = $dbh->prepare("SELECT * FROM cms_fansites c INNER JOIN users u ON c.ceo = u.username");
                                     $getFs->execute();
 
                                         if ($getFs->RowCount() > 0)
