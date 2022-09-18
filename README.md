@@ -19,7 +19,7 @@ Es un reemplazo para aquellos que quieren una opción diferente a la plantilla S
 * Sistemas de Fansite incluidos en HK
 * Sistema de información de índice incluido en HK
 
-Clic <a href="https://imgur.com/a/ut1BSN8">aquí</a> para ver las imágenes de CMS
+Clic <a href="https://imgur.com/a/ut1BSN8" target="_blank">aquí</a> para ver las imágenes de CMS
 
 ### Créditos para:
 
