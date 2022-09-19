@@ -1,21 +1,23 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/styles/app.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Virtual World, Avatar Chat and Pixel Art - Habbo</title>
 </head>
+
 <body class="container">
-	<script src="/assets/scripts/page-load.js"></script>
+    <script src="/assets/scripts/page-load.js"></script>
     <div class="page-content">
         <header class="page-content-header pixelated">
             <div class="page-content-max-width">
                 <div class="page-content-header-column">
                     <img src="https://habbofont.net/font/habbo_new_big/habbo.gif" alt="Habbo Big Logo" class="page-content-header-logo">
                 </div>
-            </div> 
+            </div>
         </header>
         <div class="page-content-collider" style="background-color: transparent;">
             <div class="page-content-max-width" style="flex-direction: column;align-items: flex-start;">
@@ -32,7 +34,8 @@
             </div>
         </div>
         <?php include_once('includes/footer.php'); ?>
-		<script src="/assets/scripts/app.js"></script>
+        <script src="/assets/scripts/app.js"></script>
     </div>
 </body>
+
 </html>

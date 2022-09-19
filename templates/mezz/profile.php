@@ -1,43 +1,41 @@
 <?php
-    $profile_active = 'active';
-	$menu="me";
+$profile_active = 'active';
+$menu = "me";
 
-	if(empty($_GET['user']))
-	    {
-	        header("Location:/");
-	    }
+if (empty($_GET['user'])) {
+    header("Location:/");
+}
 
-	$news = $dbh->prepare("SELECT * FROM users WHERE username = :name");
-	$news->bindParam(':name', $_GET['user']);
-	$news->execute();
-	if ($news->RowCount() == 0)
-	    {
-	        header("Location:/");
-	    }
+$news = $dbh->prepare("SELECT * FROM users WHERE username = :name");
+$news->bindParam(':name', $_GET['user']);
+$news->execute();
+if ($news->RowCount() == 0) {
+    header("Location:/");
+}
 ?>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/styles/app.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Perfil de: <?= userHome('username'); ?></title>
 </head>
 
 <body class="container">
-	<script src="/assets/scripts/page-load.js"></script>
+    <script src="/assets/scripts/page-load.js"></script>
     <div class="page-content">
 
-    <?php
-        if (!isset($_SESSION['id']))
-        {
+        <?php
+        if (!isset($_SESSION['id'])) {
             include('auth/login.php');
         } else {
             include('auth/logged.php');
         }
-	?>
+        ?>
 
         <?php include_once("includes/menu.php"); ?>
 
@@ -61,12 +59,12 @@
                                     <p class="page-content-collider-content-profile-purse-item-text" style="margin-top: -25px;">Monedas</p>
                                 </div>
                                 <div class="page-content-collider-content-profile-purse-item planeta">
-                                <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/planeta.png'>
+                                    <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/planeta.png'>
                                     <p class="page-content-collider-content-profile-purse-item-text"><?= userHome('activity_points'); ?></p>
                                     <p class="page-content-collider-content-profile-purse-item-text" style="margin-top: -25px;">Planetas</p>
                                 </div>
                                 <div class="page-content-collider-content-profile-purse-item esmeralda">
-                                <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/esmeralda.png'>
+                                    <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/esmeralda.png'>
                                     <p class="page-content-collider-content-profile-purse-item-text"><?= userHome('vip_points'); ?></p>
                                     <p class="page-content-collider-content-profile-purse-item-text" style="margin-top: -25px;">Esmeraldas</p>
                                 </div>
@@ -88,11 +86,11 @@
                             </div>
                             <div class="page-content-collider-content-profile-card-wrapper">
                                 <div class="page-content-collider-content-profile-card-wrapper-aligner friends">
-                                <?php include_once("get/profile/homeFriends.php"); ?>
+                                    <?php include_once("get/profile/homeFriends.php"); ?>
                                 </div>
                             </div>
                             <?php include_once("get/profile/homePhotos.php"); ?>
-                            <h3 class="page-content-collider-content-profile-date">Unido a <?=$config['hotelName']?> en <?= date('d-m-Y', userHome('account_created')); ?></h3>
+                            <h3 class="page-content-collider-content-profile-date">Unido a <?= $config['hotelName'] ?> en <?= date('d-m-Y', userHome('account_created')); ?></h3>
                             <div class="page-content-collider-content-profile-icon">
                                 <i class="page-content-collider-content-profile-icon-heart"></i>
                                 <i class="page-content-collider-content-profile-icon-heart"></i>
@@ -105,7 +103,8 @@
         </div>
         <?php include_once('includes/footer.php'); ?>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<script src="/assets/scripts/app.js"></script>
+        <script src="/assets/scripts/app.js"></script>
     </div>
 </body>
+
 </html>

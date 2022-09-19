@@ -21,6 +21,7 @@ Próximamente se presentará un tutorial sobre cómo incluirlo en su servidor y 
 7️⃣ Escriba mezz entre las comillas y guarde el archivo
 
 ## Actualizaciones
+
 ✔️ Lotería incluida
 
 ✔️ Tienda de placas
@@ -32,6 +33,7 @@ Próximamente se presentará un tutorial sobre cómo incluirlo en su servidor y 
 ✔️ Sistema de sitio de fans almacenado en la base de datos
 
 ## Que hacer
+
 ❌ Capacidad de respuesta a dispositivos móviles
 
 ❌ Sistema de Ayuda
