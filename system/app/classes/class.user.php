@@ -275,6 +275,32 @@
 			return $c['count'];
 			
 		}
+
+		public static function refUser($refUsername)
+		{
+			global $dbh, $lang;
+			$getUsernameRef = $dbh->prepare("SELECT username,ip_reg FROM users WHERE username = :username LIMIT 1");
+			$getUsernameRef->bindParam(':username', $refUsername);
+			$getUsernameRef->execute();
+			$getUsernameRefData = $getUsernameRef->fetch();
+			if ($getUsernameRef->RowCount() > 0)
+			{
+				if ($getUsernameRefData['ip_reg'] == userIp())
+				{
+					//html::error($lang["RsameIpRef"]);
+					echo 'ref_error';
+				}
+				else
+				{
+					return true;
+				}
+			}
+			else
+			{	
+				html::error($lang["RnotExist"]);
+				return false;
+			}
+		}
 		
 		public static function login()
 		{
@@ -340,6 +366,7 @@
 				return html::error($lang["Lnousername"]);
 			}
 		}
+
 		public static function register()
 		{
 			$userRealIp = userIp();
@@ -376,8 +403,6 @@
 															$stmt->execute();
 															if ($stmt->RowCount() < 100)
 															{
-																if (self::refUser($_POST['referrer']) || empty($_POST['referrer']))
-																{
 																	if(!$config['recaptchaSiteKeyEnable'] == true)
 																	{
 																		$_POST['g-recaptcha-response'] = true;
@@ -608,7 +633,7 @@
 																			$insertUserSession->bindParam(':date', strtotime('now'));
 																			$insertUserSession->bindParam(':browser', $_SERVER['HTTP_USER_AGENT']);
 																			$insertUserSession->execute();
-																			echo 'succes';
+																			header('Location: /me');
 																			return;
 																		}
 																		//User referrer//
@@ -631,16 +656,10 @@
 																			$insertUserSession->bindParam(':date', strtotime('now'));
 																			$insertUserSession->bindParam(':browser', $_SERVER['HTTP_USER_AGENT']);
 																			$insertUserSession->execute();
-																			echo 'succes';
+																			header('Location: /me');
 																			return;
 																		}
 																	}
-																	else
-																	{
-																		echo 'robot';
-																		return;
-																	}
-																}
 															}
 															else
 															{
@@ -721,6 +740,7 @@
 				}
 			}
 		}
+
 		public static function userRefClaim()
 		{
 			global $dbh, $lang;
