@@ -244,6 +244,7 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/groups">Editar Grupos</a></li>
             <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/vacantes">Vacantes</a></li>
+            <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/report">Reportes</a></li>
           </ul>
         </div>
       </li>

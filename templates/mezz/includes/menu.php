@@ -57,14 +57,15 @@
             <?php echo $howtoplay_active ?>
             <?php echo $hacerono_active ?>
             <?php echo $safety_active ?>
-        ">
+            <?php echo $report_active ?>">
+     
             <a class="page-content-nav-item-text"><?=$lang["Mwhatplay"]?></a>
             <div class="page-content-nav-item-dropdown-content">
                 <a href="/safety/what-is-habbo" class="page-content-nav-item-sub-text"><?=$lang["Mwhathabbo"]?> <?= $config['hotelName'] ?></a>
                 <a href="/safety/how-to-play" class="page-content-nav-item-sub-text">Cómo Jugar</a>
                 <a href="/safety/habbo-way" class="page-content-nav-item-sub-text">Hacer o No</a>
                 <a href="/safety/safety" class="page-content-nav-item-sub-text">La Seguridad</a>
-                <a href="#" target="_blank" class="page-content-nav-item-sub-text">Help</a>
+                <a href="/safety/report" class="page-content-nav-item-sub-text">Reporte</a>
             </div>
         </div>
 
