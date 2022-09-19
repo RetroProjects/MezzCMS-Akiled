@@ -21,7 +21,7 @@
         }
         else
         {
-            echo userHome('username').' no tiene grupos en este momento.';
+            echo userHome('username').' no tiene fotos en este momento.';
         }
     ?>
     
