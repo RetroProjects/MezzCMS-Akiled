@@ -962,6 +962,35 @@
 			}
 		}
 
+		public static function EditEmoji()
+    {
+        global $dbh, $lang;
+        if (isset($_POST['emojiuser']))
+        {
+							if(strlen(User::userData('prefixnamecolor'))>6)
+							{
+								$color=substr(User::userData('prefixnamecolor'), 0,6);
+								$emojipr=$color . ';' .$_POST['emojiuser'];
+							}
+							else
+							{
+								$emojipr=';'.$_POST['emojiuser'];
+							}
+                            $stmt = $dbh->prepare("
+								UPDATE 
+								users 
+								SET prefixnamecolor = 
+								:codeemo
+								WHERE id = 
+								:id
+								");
+                            $stmt->bindParam(':codeemo', $emojipr);
+                            $stmt->bindParam(':id', User::userData('id'));
+                            $stmt->execute();
+                            return Html::errorSucces("Emoji cambiado correctamente a ".$_POST['emojiuser']." ¡Reinicia el cliente para ver los cambios!");
+		}
+	}
+
 		Public static function editUsername()
 		{
 			global $lang,$dbh;
@@ -993,6 +1022,20 @@
 				{
 					return html::error($lang["Cchangeno"]);
 				}
+			}
+		}
+		Public static function editColorname()
+		{
+			global $lang,$dbh;
+			if (isset($_POST['editColorname']))
+			{
+				$stmt = $dbh->prepare("UPDATE users SET prefixnamecolor = :prefixnamecolor WHERE id = :id");
+				$stmt->bindParam(':prefixnamecolor', $_POST['namecolor']); 
+				$stmt->bindParam(':id', $_SESSION['id']); 
+				$stmt->execute(); 
+				header('Location: '.$config['hotelUrl'].'/me');
+					
+				
 			}
 		}
 	}																												
