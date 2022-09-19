@@ -21,7 +21,7 @@
                     <input type="password" class="page-content-collider-content-registration-item-input"name="password_repeat" id="password_repeat"  onkeyup="checkPasswords(this.value, 'password_repeat')"  placeholder="<?php echo $lang['Rrepeatpassword']; ?>...">
                 </div>
 
-                <div class="page-content-collider-content-registration-item" style="margin-bottom: -30px;">
+                <div class="page-content-collider-content-registration-item">
                     <label class="page-content-collider-content-registration-item-title"><?=$lang["Rcodigo"];?>: <?=$security;?></label>
                     <p class="page-content-collider-content-registration-item-text"><?=$lang["Rdescemail"];?></p>
                     <input type="text" class="page-content-collider-content-registration-item-input" name="code">
