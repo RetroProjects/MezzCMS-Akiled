@@ -5610,3 +5610,17 @@ a[data-gender*="F"].sex-active {
     width: 767px;
   }
 }
+.asdsucces {
+  background-color: #0fbf0f;
+  color: #d6ffff;
+  border: double;
+  border-radius: 6px;
+  text-align: center;
+}
+.asd{
+  background-color: red;
+  color: #d6ffff;
+  border: double;
+  border-radius: 6px;
+  text-align: center;
+}

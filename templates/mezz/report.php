@@ -11,13 +11,6 @@ $report_active = 'active';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title><?= $config['hotelName'] ?>: Reportes</title>
 </head>
-<Style>
-.asdsucces {
-    background-color: #0fbf0f;
-    color: #d6ffff;
-}
-</style>
-
 
 <body class="container">
     <script src="/assets/scripts/page-load.js"></script>
@@ -114,23 +107,23 @@ $report_active = 'active';
                                                         <button style="float: right;margin-right: 14px;margin-top: 40px;" name="enviar" type="submit" class="page-content-collider-content-settings-right-side-default-button fill save"><?= $lang["bottonSup"] ?></button>
                                             </form>
 
-                                            </div>
-                                            </div>
-                                 
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="page-content-collider-content-fansites-right-side">
+                                <img src="/assets/images/report/highscore_small_promo.gif" alt="Fansites" class="page-content-collider-content-fansites-right-side-image">
+
+                            </div>
                         </div>
-                    <div class="page-content-collider-content-fansites-right-side">
-                        <img src="/assets/images/report/highscore_small_promo.gif" alt="Fansites" class="page-content-collider-content-fansites-right-side-image">
-                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     </div>
-    </div>
-                              
-                         
-                    </div>
 
     <?php include_once('includes/footer.php'); ?>
     </div>
