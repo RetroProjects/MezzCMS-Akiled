@@ -18,7 +18,7 @@
           {
       ?>
         <div class="page-content-collider-content-photos">
-          <span class="page-content-collider-content-photos-promo pixelated" style="background-image: url(http://swfs.localhost/photos/<?php echo filter($news["photo"]) ?>.png)"></span>
+          <span class="page-content-collider-content-photos-promo pixelated" style="background-image: url(<?php echo $config['roomphotos'] ?><?php echo filter($news["photo"]) ?>.png)"></span>
 
           <div class="page-content-collider-content-photos-bottom-side">
             <a href="/profile/<?php echo filter($news["username"]) ?>" class="page-content-collider-content-photos-bottom-side-avatar">

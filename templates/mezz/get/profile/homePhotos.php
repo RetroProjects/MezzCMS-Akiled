@@ -13,7 +13,7 @@
     ?>
         <div class='page-content-collider-content-profile-photo'>
 
-            <span class='page-content-collider-content-profile-photo-promo pixelated' style='background-image: url(http://swfs.localhost/photos/<?=filter($photos["photo"])?>.png)'></span>
+            <span class='page-content-collider-content-profile-photo-promo pixelated' style='background-image: url(<?php echo $config['roomphotos'] ?><?=filter($photos["photo"])?>.png)'></span>
         
         </div>
     <?php

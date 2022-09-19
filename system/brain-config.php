@@ -43,7 +43,7 @@
 	$config['onlineCounter'] = true;	
 	$config['groupBadgeURL'] = "http://mezz.localhost/habbo-imaging/badge.php?badge=";
 	$config['roomthumball'] = "http://mezz.localhost/newfoto/thumbnail/"; 
-	$config['roomphotos'] = "http://swfs.localhost/photos/"; 
+	$config['roomphotos'] = "http://swfs.localhost/newfoto/photos/"; 
 	$config['badgeURL'] = "http://swfs.localhost/c_images/album1584/"; 
 	$config['badgeURLu'] = "http://mezz.localhost/swfs/c_images/placas/"; 
 	$hotel['swfLink'] = "http://swfs.localhost/c_images/album1584/"; 

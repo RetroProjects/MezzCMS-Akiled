@@ -56,17 +56,17 @@
                             </div>
                             <div class="page-content-collider-content-profile-purse">
                                 <div class="page-content-collider-content-profile-purse-item credits">
-                                    <img src="http://akiled.localhost/templates/sloptv4.2/assets/images/credits.png">
+                                    <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/credits.png'>
                                     <p class="page-content-collider-content-profile-purse-item-text"><?= filter(userHome('credits')); ?></p>
                                     <p class="page-content-collider-content-profile-purse-item-text" style="margin-top: -25px;">Monedas</p>
                                 </div>
                                 <div class="page-content-collider-content-profile-purse-item planeta">
-                                <img src="http://akiled.localhost/templates/sloptv4.2/assets/images/planeta.png">
+                                <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/planeta.png'>
                                     <p class="page-content-collider-content-profile-purse-item-text"><?= userHome('activity_points'); ?></p>
                                     <p class="page-content-collider-content-profile-purse-item-text" style="margin-top: -25px;">Planetas</p>
                                 </div>
                                 <div class="page-content-collider-content-profile-purse-item esmeralda">
-                                <img src="http://akiled.localhost/templates/sloptv4.2/assets/images/esmeralda.png">
+                                <img src='/templates/<?= $config["skin"]; ?>/assets/images/user-space/esmeralda.png'>
                                     <p class="page-content-collider-content-profile-purse-item-text"><?= userHome('vip_points'); ?></p>
                                     <p class="page-content-collider-content-profile-purse-item-text" style="margin-top: -25px;">Esmeraldas</p>
                                 </div>
