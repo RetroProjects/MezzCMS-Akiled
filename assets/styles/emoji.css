@@ -1,94 +1,94 @@
-.error{
-    position: unset;
-    margin-top: 0;
-    margin-left: 0;
-    background: #882424;
+.error {
+  position: unset;
+  margin-top: 0;
+  margin-left: 0;
+  background: #882424;
 }
 .errorSucces {
-    position: unset;
-    margin-top: 7px;
-    margin-left: 0;
-    background: #2f762a;
-    padding: 5px;
-    border-radius: 5px;
+  position: unset;
+  margin-top: 7px;
+  margin-left: 0;
+  background: #2f762a;
+  padding: 5px;
+  border-radius: 5px;
 }
 .bottomBar-emoji-secim-box {
-    z-index: 1;
-    margin-left: -35px;
-    width: 525px;
-    height: 269px;
-    background: #e5e5e5d4;
-    border-radius: 12px;
-    box-sizing: initial;
-    filter: drop-shadow(2px 4px 6px #00000069);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    border-color: white;
-    border-style: groove;
+  z-index: 1;
+  margin-left: -35px;
+  width: 525px;
+  height: 269px;
+  background: #e5e5e5d4;
+  border-radius: 12px;
+  box-sizing: initial;
+  filter: drop-shadow(2px 4px 6px #00000069);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-color: white;
+  border-style: groove;
 }
 .esb-header {
-    background: #1e7295;
-    margin: 5px;
-    border-radius: 4px;
-    border-top: 3px solid #2b8bb3;
-    border-bottom: 3px solid #1a6280;
-    text-align: center;
-    font-size: 14px;
-    font-family: arial;
-    color: #e9f1f5;
-    font-weight: 700;
-    padding: 4px;
+  background: #1e7295;
+  margin: 5px;
+  border-radius: 4px;
+  border-top: 3px solid #2b8bb3;
+  border-bottom: 3px solid #1a6280;
+  text-align: center;
+  font-size: 14px;
+  font-family: arial;
+  color: #e9f1f5;
+  font-weight: 700;
+  padding: 4px;
 }
 .emojiBottom {
-    left: 88px;
-    bottom: -18px;
-    border-bottom-style: solid;
-    border-top: 15px solid #e5e5e5d4;
-    border-right: 15px solid #0000;
-    border-bottom-color: #0000;
-    border-left: 15px solid #0000;
-    color: #000;
-    box-sizing: initial;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+  left: 88px;
+  bottom: -18px;
+  border-bottom-style: solid;
+  border-top: 15px solid #e5e5e5d4;
+  border-right: 15px solid #0000;
+  border-bottom-color: #0000;
+  border-left: 15px solid #0000;
+  color: #000;
+  box-sizing: initial;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 .emoji-list {
-    margin: 9px;
-    height: 235px;
-    width: 533px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    list-style: none;
+  margin: 9px;
+  height: 235px;
+  width: 533px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  list-style: none;
 }
 
 .emoji-kategori-box {
-    width: 97%;
-    height: 12px;
-    color: #083b50;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 17px;
-    float: left;
+  width: 97%;
+  height: 12px;
+  color: #083b50;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 17px;
+  float: left;
 }
 .emojibox {
-    width: 28.5px;
-    height: 30px;
-    background: #0000001c;
-    padding: 1px 2px 2px;
-    font-size: 21px;
-    border-radius: 5px;
-    float: left;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    text-align: center;
-    box-sizing: initial;
+  width: 28.5px;
+  height: 30px;
+  background: #0000001c;
+  padding: 1px 2px 2px;
+  font-size: 21px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: initial;
 }
 .emojibox:hover {
-    transition-delay: 0ms;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+  transition-delay: 0ms;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .topnav {
@@ -112,7 +112,7 @@
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
 
@@ -121,7 +121,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -129,7 +131,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
