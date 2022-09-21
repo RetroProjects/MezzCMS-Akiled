@@ -18,6 +18,7 @@ Es un reemplazo para aquellos que quieren una opción diferente a la plantilla S
 * Eliminando sistemas inútiles de HK
 * Sistemas de Fansite incluidos en HK
 * Sistema de información de índice incluido en HK
+* Sistema de Reportes
 
 Clic <a href="https://imgur.com/a/ut1BSN8" target="_blank">aquí</a> para ver las imágenes de CMS
 
