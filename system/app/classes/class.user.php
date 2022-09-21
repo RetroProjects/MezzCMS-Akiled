@@ -1058,4 +1058,70 @@
 				
 			}
 		}
+
+		public static function CreateReport()
+		{
+			global $lang,$dbh;
+			if(isset($_POST['report']))
+			{
+				if(!empty(filter($_POST['title'])))
+				{
+					if(!empty(filter($_POST['problem'])))
+					{
+						$stmt2 = $dbh->prepare(
+							"INSERT INTO cms_reports 
+							(author, title, category, problem, state, time) 
+							VALUES 
+							(:author, :title, :category, :problem, 'Abierto', :time)");
+
+						$stmt2->bindParam(':author', User::userData('username'));
+						$stmt2->bindParam(':title', $_POST['title']);
+						$stmt2->bindParam(':category', $_POST['category']);
+						$stmt2->bindParam(':problem', $_POST['problem']);
+						$stmt2->bindParam(':time', strtotime('now'));
+						$stmt2->execute();
+						return Html::errorSucces("Su mensaje ha sido enviado con éxito! Su estado será respondido y actualizado en breve.");
+					} else {
+						return Html::errornew("Necesitas ingresar el problema");
+					}
+				} else {
+					return Html::errornew("Necesitas ingresar un título");
+				}
+			}
+		}
+
+		public static function ReportNewQuestion()
+		{
+			global $lang,$dbh;
+			if (isset($_POST['newquestion']))
+			{
+				if (!empty($_POST['question']))
+				{
+						$postNews = $dbh->prepare("
+						INSERT INTO cms_reports_newquestion(report_id,question,user,time)
+						VALUES
+						(
+						:report_id, 
+						:question, 
+						:user, 
+						:time
+						)");
+						$postNews->bindParam(':report_id', $_POST['report_id']);
+						$postNews->bindParam(':question', $_POST['question']);
+						$postNews->bindParam(':user', User::userData('username'));
+						$postNews->bindParam(':time', strtotime('now'));
+						$postNews->execute();
+						header('Location: /myreports/'.$_GET['id'].'');
+				}
+				else
+				{
+					Html::errornew("No tiene mensagem");
+					return;
+				}
+			}
+			else
+			{
+			}
+		}
+
 	}																												

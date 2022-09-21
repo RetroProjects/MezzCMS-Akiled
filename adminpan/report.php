@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include_once "includes/head.php";
-$_SESSION['title'] = '';
-$_SESSION['slogan'] = '';
-$_SESSION['news'] = '';
-admin::CheckRank(13);
+  include_once "includes/head.php";
+  $_SESSION['title'] = '';
+  $_SESSION['slogan'] = '';
+  $_SESSION['news'] = '';
+  admin::CheckRank(13);
 ?>
 
 <body>
 
   <?php
-  include_once "includes/navi.php";
-  include_once "includes/header.php";
-
+    include_once "includes/navi.php";
+    include_once "includes/header.php";
   ?>
-
 
   <div class="main-panel">
     <div class="content-wrapper">
       <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Reportes del hotel</h4>
-            <p class="card-description"> <code>(No Real Time)</code>
-            </p>
+            <h4 class="card-title">Reportes Abiertos y en Tratamiento</h4>
+            <p class="card-description"> <code>(Responda las llamadas a continuación si no tiene staff respondiendo.)</code></p>
+
             <?php admin::DeleteReport(); ?>
+
+            
+
             <div class="table-responsive " style=" max-height: 600px; overflow-y: scroll">
               <table class="table table-hover">
-
                 <thead>
                   <tr>
-                    <th><?= $lang["Hkreporttema1"] ?></th>
-                    <th><?= $lang["Hkreporttema2"] ?></th>
-                    <th><?= $lang["Hkreporttema3"] ?></th>
-                    <th><?= $lang["Hkreporttema4"] ?></th>
-                    <th><?= $lang["Hkreporttema5"] ?></th>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Categoría</th>
+                    <th>Estado</th>
+                    <th>Autor</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <?php
-                  $getArticles = $dbh->prepare("SELECT * FROM cms_report ORDER BY id DESC");
-                  $getArticles->execute();
-                  while ($news = $getArticles->fetch()) {
-                    echo '';
-                    echo '<tr>
-										<td style="width: 10%;">' . filter($news["titulo"]) . '</td>
-										<td style="width: 20%;">' . filter($news["categoria"]) . '</td>
-										<td style="width: 40%;">' . htmlentities($news["comentario"]) . '</td>
-										<td>' . $news["autor"] . '</td>
-										';
-                    if (User::userData('rank') > '10') {
-                      echo '	
-											<td><a type="button" class="btn btn-danger"  href=' . $config['hotelUrl'] . '/adminpan/report/delete/' . $news["id"] . '>Eliminar</center></a></td>
-											</tr>
-										
 
-											';
-                    }
-                  }
-                  ?>
+                <?php
+                  $getArticles = $dbh->prepare("SELECT * FROM cms_reports WHERE state = 'Abierto' OR state = 'Tratamiento' ORDER BY id DESC");
+                  $getArticles->execute();
+                    while ($news = $getArticles->fetch()) {
+                ?>
+
+                <tbody>
+
+                    <tr>
+                      <td><?=filter($news["id"])?></td>
+                      <td><?=filter($news["title"])?></td>
+                      <td><?=filter($news["category"])?></td>
+                      <?php if($news["state"] == 'Abierto') { ?>
+                      <td style="color: green;"><?=filter($news["state"])?></td>
+                      <?php } else { ?>
+                      <td style="color: orange;"><?=filter($news["state"])?></td>
+                      <?php } ?>
+                      <td><?=filter($news["author"])?></td>
+
+                      <?php if (User::userData('rank') > '10') { ?>
+
+                      <?php
+                        if ($news["state"] == "Abierto" || $news["state"] == "Tratamiento" || $news["state"] == "" ) {
+                      ?>
+
+                      <td>
+                        <a type="button" class="btn btn-primary"  href="/adminpan/replyreport/<?=$news["id"]?>">Editar</a>
+                      </td>
+
+                      <?php } else { ?>
+
+                        <td>
+                          <a type="button" class="btn btn-info" href="/adminpan/viewreportclosed/<?=$news["id"]?>">Para ver</a>
+                        </td>
+
+                      <?php } ?>
+
+                      <td>
+                        <a type="button" class="btn btn-danger"  href="/adminpan/report/delete/<?=$news["id"]?>">Eliminar</a>
+                      </td>
+                  </tr>
+
+                  <?php } } ?>
+
                 </tbody>
               </table>
             </div>
@@ -68,17 +93,82 @@ admin::CheckRank(13);
       </div>
     </div>
 
+    <div class="content-wrapper">
+      <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Reportes Cerrados</h4>
+            <p class="card-description"> <code>(Reportes que ya han sido cerradas)</code></p>
 
+            <?php admin::DeleteReport(); ?>
 
-    <!-- content-wrapper ends -->
-    <!-- partial:partials/_footer.html -->
+            
+
+            <div class="table-responsive " style=" max-height: 600px; overflow-y: scroll">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Categoría</th>
+                    <th>Estado</th>
+                    <th>Autor</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+
+                <?php
+                  $getArticles = $dbh->prepare("SELECT * FROM cms_reports WHERE state = 'Cerrado' ORDER BY id DESC");
+                  $getArticles->execute();
+                    while ($news = $getArticles->fetch()) {
+                ?>
+
+                <tbody>
+
+                    <tr>
+                      <td><?=filter($news["id"])?></td>
+                      <td><?=filter($news["title"])?></td>
+                      <td><?=filter($news["category"])?></td>
+                      <td style="color: #e71c1c;"><?=filter($news["state"])?></td>
+                      <td><?=filter($news["author"])?></td>
+
+                      <?php if (User::userData('rank') > '10') { ?>
+
+                      <?php
+                        if ($news["state"] == "Abierto" || $news["state"] == "Tratamiento" || $news["state"] == "" ) {
+                      ?>
+
+                      <td>
+                        <a type="button" class="btn btn-primary"  href="/adminpan/replyreport/<?=$news["id"]?>">Editar</a>
+                      </td>
+
+                      <?php } else { ?>
+
+                        <td>
+                          <a type="button" class="btn btn-info" href="/adminpan/viewreportclosed/<?=$news["id"]?>">Para ver</a>
+                        </td>
+
+                      <?php } ?>
+
+                      <td>
+                        <a type="button" class="btn btn-danger"  href="/adminpan/report/delete/<?=$news["id"]?>">Eliminar</a>
+                      </td>
+                  </tr>
+
+                  <?php } } ?>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <?php
-    include_once "includes/footer.php";
+      include_once "includes/footer.php";
     ?>
-    <!-- container-scroller -->
 
-    <!-- End custom js for this page -->
 </body>
-
 
 </html>

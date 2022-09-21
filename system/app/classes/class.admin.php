@@ -1421,7 +1421,7 @@
 			global $dbh, $lang;
 			if(isset($_GET['delete'])) 
 			{ 
-				$deleteBan = $dbh->prepare("DELETE FROM cms_report WHERE id=:newsid");
+				$deleteBan = $dbh->prepare("DELETE FROM cms_reports WHERE id=:newsid");
 				$deleteBan->bindParam(':newsid', $_GET['delete']);
 				$deleteBan->execute();
 				$action='Ha eliminado un ticket.';
@@ -2283,4 +2283,117 @@
 			{
 			}
 		}
+
+		public static function ViewReport($variable)
+		{
+			global $dbh,$config;
+			if (isset($_GET['id'])) {
+					
+					$getUser = $dbh->prepare("SELECT * FROM cms_reports WHERE id=:id LIMIT 1");
+					$getUser->bindParam(':id', $_GET['id']);
+					$getUser->execute();
+					if ($getUser->RowCount() == 1) 
+					{
+						$item = $getUser->fetch();
+						return filter($item[$variable]);
+					} 
+					else 
+					{
+						Admin::error("¡Información no encontrado!"); exit;
+					}
+				}
+			
+		}
+
+		public static function ViewReportNewQuestion($variable)
+		{
+			global $dbh,$config;
+			if (isset($_GET['id'])) {
+					
+					$getUser = $dbh->prepare("SELECT * FROM cms_reports_newquestion WHERE id=:id LIMIT 1");
+					$getUser->bindParam(':id', $_GET['id']);
+					$getUser->execute();
+					if ($getUser->RowCount() == 1) 
+					{
+						$item = $getUser->fetch();
+						return filter($item[$variable]);
+					} 
+					else 
+					{
+						Admin::error("¡Información no encontrado!"); exit;
+					}
+				}
+			
+		}
+
+		public static function ViewReplyReport($variable)
+		{
+			global $dbh,$config;
+			if (isset($_GET['id'])) {
+					
+					$getUser = $dbh->prepare("SELECT * FROM cms_reportsreply WHERE report_id=:id LIMIT 1");
+					$getUser->bindParam(':id', $_GET['id']);
+					$getUser->execute();
+					if ($getUser->RowCount() == 1) 
+					{
+						$item = $getUser->fetch();
+						return filter($item[$variable]);
+					} 
+					else 
+					{
+						Admin::error("¡Información no encontrado!"); exit;
+					}
+				}
+			
+		}
+
+		public static function ReplyReport()
+		{
+			global $dbh;
+			if (isset($_POST['postreply']))
+			{
+				if (!empty($_POST['reply']))
+				{
+						$postNews = $dbh->prepare("
+						INSERT INTO cms_reportsreply(report_id,reply,staff,time)
+						VALUES
+						(
+						:report_id,
+						:reply, 
+						:staff,
+						:time
+						)");
+						$postNews->bindParam(':report_id', $_POST['report_id']);
+						$postNews->bindParam(':reply', $_POST['reply']);
+						$postNews->bindParam(':staff', User::userData('username'));
+						$postNews->bindParam(':time', strtotime('now'));
+						$postNews->execute();
+				}
+				else
+				{
+					Html::errornew("Tienes que escribir una respuesta");
+					return;
+				}
+			}
+			else
+			{
+			}
+		}
+
+		public static function ChangeStatusReport()
+		{
+			global $dbh;
+			if (isset($_POST['statusreport'])) 
+			{
+				$editNews = $dbh->prepare("UPDATE cms_reports SET 
+				state=:state,
+				staff=:staff
+				WHERE id = :id");
+				$editNews->bindParam(':state', $_POST['state']);
+				$editNews->bindParam(':staff', $_POST['staff']);
+				$editNews->bindParam(':id', $_GET['id']);
+				$editNews->execute();
+			}
+		}
+
 	}						

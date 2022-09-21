@@ -200,6 +200,8 @@
 					case "client-nitro":
 					case "online":
 					case "home/":
+					case "help":
+					case "myreports/":
 					case "changename":
 					header('Location: '.$config['hotelUrl'].'/index');
 					break;
@@ -255,6 +257,10 @@
 		public static function error($errorName)
 		{
 			echo '<div class="error" style="display: block;">'.$errorName.'</div>';
+		}
+		public static function errornew($errorName)
+		{
+			echo '<div class="errornew" style="display: block; display: block; background-color: #a10f0f; border-radius: 5px; margin-bottom: 15px; text-align: center; width: 100%; color: white;">'.$errorName.'</div>';
 		}
 		public static function errorSucces($succesMessage)
 		{
