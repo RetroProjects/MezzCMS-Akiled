@@ -27,11 +27,6 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <?php
-                                admin::ViewReport("id");
-                                admin::ViewReportNewQuestion("id");
-                            ?>
-
                             <input id="icon_prefix" type="hidden" value="<?php echo admin::ViewReport("id"); ?>" name="naam" class="form-control">
 
                             <div class="form-group">
