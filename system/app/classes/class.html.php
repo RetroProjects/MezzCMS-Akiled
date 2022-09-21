@@ -264,7 +264,7 @@
 		}
 		public static function errorSucces($succesMessage)
 		{
-			echo '<div class="errorSucces" style="display: block;">'.$succesMessage.'</div>';
+			echo '<div class="errorSucces" style="display: block; display: block; background-color: #09994e; border-radius: 5px; margin-bottom: 15px; text-align: center; width: 100%; color: white;">'.$succesMessage.'</div>';
 		}
 		public static function loadPlugins()
 		{
