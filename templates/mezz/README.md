@@ -32,11 +32,11 @@ Próximamente se presentará un tutorial sobre cómo incluirlo en su servidor y 
 
 ✔️ Sistema de sitio de fans almacenado en la base de datos
 
+✔️ Sistema de Ayuda
+
 ## Que hacer
 
 ❌ Capacidad de respuesta a dispositivos móviles
-
-❌ Sistema de Ayuda
 
 ❌ Página de mantenimiento no codificada
 

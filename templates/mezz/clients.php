@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/clients.css?<?= $hotel['cache']; ?>" type="text/css">
     <script src="/templates/<?= $config['skin'] ?>/client/js/client.js?<?= $hotel['cache']; ?>" type="text/javascript"></script>
-    <script src="<?= $config['hotelUrl'] ?>/js/jquery1.7.4.js"></script>
+    <script src="<?= $config['hotelUrl'] ?>/AkiledSockets/jquery1.7.4.js"></script>
     <link rel="shortcut icon" href="<?= $config['hotelUrl'] ?>/templates/<?= $config['skin'] ?>/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="shortcut icon" type="img/png" href="/templates/<?= $config['skin'] ?>/app/assets/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&amp;subset=Latin">
