@@ -4,16 +4,6 @@
 <head>
     <title><?= $config['hotelName'] ?>: Hotel</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
-    <script type="text/javascript">
-        function cerrarpvpradio() {
-            var elem = document.getElementById('pvpradio');
-            elem.parentNode.removeChild(elem);
-            return false;
-        }
-        var roomId = 0;
-    </script>
-
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/clients.css?<?= $hotel['cache']; ?>" type="text/css">
     <script src="/templates/<?= $config['skin'] ?>/client/js/client.js?<?= $hotel['cache']; ?>" type="text/javascript"></script>
@@ -25,10 +15,6 @@
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/client.css?<?= $hotel['cache']; ?>" type="text/css">
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/radio.css?<?= $hotel['cache']; ?>" type="text/css">
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/tipped.css?<?= $hotel['cache']; ?>" type="text/css">
-
-
-    <script type="text/javascript" src="<?= $config['hotelUrl'] ?>/jqueryhnew.min.js?33"></script>
-    <script type="text/javascript" src="<?= $config['hotelUrl'] ?>/jquery-uihnew.min.js?33"></script>
 
 </head>
 

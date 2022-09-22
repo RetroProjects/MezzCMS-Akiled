@@ -6,16 +6,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta charset="ISO-8859-1">
 
-
-    <script type="text/javascript">
-        function cerrarpvpradio() {
-            var elem = document.getElementById('pvpradio');
-            elem.parentNode.removeChild(elem);
-            return false;
-        }
-        var roomId = 0;
-    </script>
-
     <link rel="stylesheet" href="./css/main.css">
     <script src="/themes/<?= $config['skin'] ?>/client/js/client.js?<?= $hotel['cache']; ?>" type="text/javascript"></script>
 
