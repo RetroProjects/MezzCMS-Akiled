@@ -7,7 +7,6 @@
     <meta charset="ISO-8859-1">
 
     <link rel="stylesheet" href="./css/main.css">
-    <script src="/themes/<?= $config['skin'] ?>/client/js/client.js?<?= $hotel['cache']; ?>" type="text/javascript"></script>
 
     <link rel="shortcut icon" href="<?= $config['hotelUrl'] ?>/templates/<?= $config['skin'] ?>/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="shortcut icon" type="img/png" href="/templates/<?= $config['skin'] ?>/app/assets/img/favicon.png">
@@ -17,9 +16,6 @@
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/radio.css?<?= $hotel['cache']; ?>" type="text/css">
     <link rel="stylesheet" href="/templates/<?= $config['skin'] ?>/client/css/tipped.css?<?= $hotel['cache']; ?>" type="text/css">
 
-
-    <script type="text/javascript" src="<?= $config['hotelUrl'] ?>/jqueryhnew.min.js?33"></script>
-    <script type="text/javascript" src="<?= $config['hotelUrl'] ?>/jquery-uihnew.min.js?33"></script>
 
 
 </head>
