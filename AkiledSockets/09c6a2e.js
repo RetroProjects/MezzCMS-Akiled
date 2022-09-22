@@ -2541,7 +2541,7 @@
                 }(k),
                 fe = function() {
                     function t(e, n, r, c) {
-                        Object(o.a)(this, t), this._id = e, this._name = n, this._instance = new Audio("//localhost/sounds/" + n + ".mp3"), this._instance.setAttribute("allow", "autoplay"), this._loop = c, this._volume = 1, this._type = r
+                        Object(o.a)(this, t), this._id = e, this._name = n, this._instance = new Audio("http://swfs.localhost/sounds/" + n + ".mp3"), this._instance.setAttribute("allow", "autoplay"), this._loop = c, this._volume = 1, this._type = r
                     }
                     return Object(c.a)(t, [{
                         key: "name",
