@@ -28,12 +28,12 @@
 
       <?php include_once("getButtons.php"); ?>
 
-    <h2 class="page-content-collider-content-news-right-side-content-title">Reporte: <?php echo filter($news2["title"]); ?></h2>
+    <h2 class="page-content-collider-content-news-right-side-content-title"><?= $lang["ReportTituloGet"] ?>: <?php echo filter($news2["title"]); ?></h2>
 
-    <p><b>Categoría: </b><?php echo filter($news2['category']); ?></p>
-    <p><b>Problema: </b><?php echo filter($news2['problem']); ?></p>
-    <p><b>Fecha de Creación: </b><?php echo date('d/m/Y H:i:s', $news2['time']); ?></p>
-    <p><b>Staff Responsable: </b><?php echo filter($news2['staff']); ?></p>
+    <p><b><?= $lang["Reportcatetorias1get"] ?>: </b><?php echo filter($news2['category']); ?></p>
+    <p><b><?= $lang["Reportcatetorias2get"] ?>: </b><?php echo filter($news2['problem']); ?></p>
+    <p><b><?= $lang["Reportcatetorias3get"] ?>: </b><?php echo date('d/m/Y H:i:s', $news2['time']); ?></p>
+    <p><b><?= $lang["Reportcatetorias4get"] ?>: </b><?php echo filter($news2['staff']); ?></p>
 
     <div class="page-content-collider-content-news-right-side-content-article-author">
       <span class="page-content-collider-content-news-right-side-content-article-author-figure" style="background-image: url(<?php echo $config['AvatarURL'] ?><?php echo filter($user2["look"]) ?>&action=std&direction=2&head_direction=3&img_format=undefined&gesture=sml&headonly=0&size=b);"></span>
@@ -47,8 +47,8 @@
       } else {
     ?>
 
-    <h2 class="page-content-collider-content-news-right-side-content-title">¡Página no encontrada! »</h2>
-    <p>Esta página no existe</p>
+    <h2 class="page-content-collider-content-news-right-side-content-title"><?= $lang["Reportnotfoundget"] ?> »</h2>
+    <p><?= $lang["Reportnotexistget"] ?></p>
 
     <?php
       }
@@ -64,10 +64,10 @@
   while ($news = $getArticles->fetch()) {
   ?>
 
-  <h2 class="page-content-collider-content-news-right-side-content-title" style="margin-top: 30px;">Nueva pregunta</h2>
+  <h2 class="page-content-collider-content-news-right-side-content-title" style="margin-top: 30px;"><?= $lang["Reportnewquestget"] ?></h2>
 
-  <p><b>Pregunta: </b><?php echo filter($news['question']); ?></p>
-  <p><b>Fecha de Respuesta: </b><?php echo date('d/m/Y H:i:s', $news['time']); ?></p>
+  <p><b><?= $lang["Reportquest1get"] ?>: </b><?php echo filter($news['question']); ?></p>
+  <p><b><?= $lang["Reportdateresponseget"] ?>: </b><?php echo date('d/m/Y H:i:s', $news['time']); ?></p>
 
   <div class="page-content-collider-content-news-right-side-content-article-author">
     <span class="page-content-collider-content-news-right-side-content-article-author-figure" style="background-image: url(<?php echo $config['AvatarURL'] ?><?php echo filter($user2["look"]) ?>&action=std&direction=2&head_direction=3&img_format=undefined&gesture=sml&headonly=0&size=b);"></span>
@@ -111,7 +111,7 @@
         while ($news2 = $news->fetch()) {
   ?>
 
-  <h2 class="page-content-collider-content-news-right-side-content-title">Respuesta</h2>
+  <h2 class="page-content-collider-content-news-right-side-content-title"><?= $lang["Reportresponsesget"] ?></h2>
 
   <p><b>Solución: </b><?php echo filter($news2['reply']); ?></p>
   <p><b>Fecha de Respuesta: </b><?php echo date('d/m/Y H:i:s', $news2['time']); ?></p>
@@ -129,8 +129,8 @@
     } else {
   ?>
 
-  <h2 class="page-content-collider-content-news-right-side-content-title">Respuesta del Equipo »</h2>
-  <p>Hasta el momento su llamada no ha sido respondida. Espere o siéntase libre de hacer más preguntas.</p>
+  <h2 class="page-content-collider-content-news-right-side-content-title"><?= $lang["Reportresponsesget"] ?> »</h2>
+  <p><?= $lang["Reportresponsesdescget"] ?></p>
 
   <?php
   }
@@ -154,14 +154,14 @@
     <div class="page-content-collider-content-settings-right-side-item">
       <div class="page-content-collider-content-settings-right-side-item-column">
 
-        <h3 class="page-content-collider-content-settings-right-side-item-title">Responder Reporte</h3>
+        <h3 class="page-content-collider-content-settings-right-side-item-title"><?= $lang["Reportrespondereportget"] ?></h3>
 
         <?php User::ReportNewQuestion(); ?>
 <form action="" method="POST">
 
         <textarea type="text" name="question" id="newquestion" class="page-content-collider-content-settings-right-side-item-input" placeholder="Escribe tu nueva pregunta" style="color: #2c3039; font-size: 15px; font-weight: 500; padding: 5px 10px; box-shadow: 0px 0px 0px 1px #00000042; border-radius: 3px; margin: 3px 0 10px 0; width: 500px; height: 100px;"></textarea>
 
-        <p class="page-content-collider-content-settings-right-side-item-description">¡Haga su pregunta!</p>
+        <p class="page-content-collider-content-settings-right-side-item-description"><?= $lang["Reportquestionuserget"] ?></p>
 
       </div>
     </div>

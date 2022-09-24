@@ -10,7 +10,7 @@ $whatishabbo_active = 'active';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/styles/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title><?= $config['hotelName'] ?>: ¿Qué es <?= $config['hotelName'] ?>?</title>
+    <title><?= $lang['TittleHader2']?>?</title>
 </head>
 
 <body class="container">

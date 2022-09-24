@@ -11,7 +11,7 @@ $shop_active = 'active';
     <link rel="stylesheet" type="text/css" href="/assets/styles/app.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/shop.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title><?= $config['hotelName'] ?>: Tienda</title>
+    <title><?= $config['hotelName'] ?>: <?= $lang["TittleHader"] ?></title>
 </head>
 
 <body class="container">

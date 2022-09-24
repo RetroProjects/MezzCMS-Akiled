@@ -11,7 +11,7 @@ $emoji_active = 'active';
     <link rel="stylesheet" type="text/css" href="/assets/styles/app.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/emoji.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title><?= $config['hotelName'] ?>: Cambio de emoji</title>
+    <title><?= $config['hotelName'] ?>: <?= $lang["TittleHader6"] ?></title>
 </head>
 
 <body class="container">

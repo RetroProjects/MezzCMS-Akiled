@@ -1,4 +1,4 @@
-<h3 class="page-content-collider-content-settings-right-side-item-title" style="align-self: left;">Abierto</h3>
+<h3 class="page-content-collider-content-settings-right-side-item-title" style="align-self: left;"><?= $lang["ReportListOpen"] ?></h3>
 
 <?php
   $getArticles = $dbh->prepare("SELECT * FROM cms_reports WHERE state = 'Abierto' ORDER BY id DESC");
@@ -27,7 +27,7 @@
 
     <br>
 
-<h3 class="page-content-collider-content-settings-right-side-item-title" style="align-self: left;">Tratamiento</h3>
+<h3 class="page-content-collider-content-settings-right-side-item-title" style="align-self: left;"><?= $lang["ReportListTratamiento"] ?></h3>
 
 <?php
   $getArticles = $dbh->prepare("SELECT * FROM cms_reports WHERE state = 'Tratamiento' ORDER BY id DESC");
@@ -56,7 +56,7 @@
 
     <br>
 
-    <h3 class="page-content-collider-content-settings-right-side-item-title" style="align-self: left;">Cerrado</h3>
+    <h3 class="page-content-collider-content-settings-right-side-item-title" style="align-self: left;"><?= $lang["ReportListClose"] ?></h3>
 
     <?php
       $getArticles = $dbh->prepare("SELECT * FROM cms_reports WHERE state = 'Cerrado' ORDER BY id DESC");

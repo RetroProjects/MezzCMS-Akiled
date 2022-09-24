@@ -724,7 +724,7 @@ $lang["tutoapp1"] = "Tutorial App";
 	$lang["DesTitle2"] = "Accede a Hotel a través de la aplicación.";
 	$lang["LaunchApp"] = "Launch App";
 	$lang["LaunchDesc"] = "Actualmente estás iniciando sesión con la cuenta";
-	$lang["DescApp"] = "Ainda não baixou o app do";
+	$lang["DescApp"] = "Todavía no has descargado la aplicación";
 	$lang["AppWindows"] = "Descargar para Windows";
 	$lang["AppMac"] = "Descargar para Mac";
 
@@ -783,7 +783,7 @@ $lang["tutoapp1"] = "Tutorial App";
 	$lang["RkEmerald"] = "Esmeraldas";
 
 	//Shop -- Mezz ----------------------------------------------------------------------------------------
-
+	
 	$lang["LoteriaTitle"] = "COMPRAR LOTERIA";
 	$lang["LoteriaDesc"] = "¿Cómo funciona la lotería en Hionix
 	La lotería llega a Hionix, a partir de ahora, tendrá que seleccionar dos números, cada uno tendrá que estar entre 1 y 10. El premio del ganador se enviará directamente a la cuenta del usuario.";
@@ -795,6 +795,24 @@ $lang["tutoapp1"] = "Tutorial App";
 	<p class='page-content-collider-content-shop-right-side-box-content-text'><b class='page-content-collider-content-shop-right-side-box-content-text -bold'>Todas las formas legítimas de comprar créditos se muestran aquí o en la tienda del juego. Comprarlos en otro lugar puede hacer que te estafen y te prohíban.</b></p>
 	<p class='page-content-collider-content-shop-right-side-box-content-text'>Habbo tiene diferentes límites de gasto para diferentes opciones de pago. Todos se enumeran en nuestros <a href='#' target='_blank' class='page-content-collider-content-shop-right-side-box-content-text-url'>Límites de gasto</a> en Habbo Helpdesk.</p>
 	<p class='page-content-collider-content-shop-right-side-box-content-text'>Recibí una consulta sobre su <b class='page-content-collider-content-shop-right-side- box-content-text-bold'>¿Cuenta Habbo, una compra o una función?</b> Encuentra tu respuesta en la <a href='#' target='_blank' class='page-content-collider-content- shop-right-side-box-content-text-url'>Mesa de ayuda de Habbo.</a></p>";
+	
+	//Title Pages -- Mezz ----------------------------------------------------------------------------------------
+
+	$lang["TittleHader"] = "Tienda";
+	$lang["TittleHader1"] = "Equipo";
+	$lang["TittleHader2"] = $config['hotelName'].": ¿Qué es ".$config['hotelName']."?";
+	$lang["TittleHader3"] = "Configuración de Privacidad";
+	$lang["TittleHader4"] = "Configuración de Contraseña";
+	$lang["TittleHader5"] = "Ajustes del correo electrónico";
+	$lang["TittleHader6"] = "Cambio de emoji";
+	$lang["TittleHader7"] = "Seguridad";
+	$lang["TittleHader8"] = "Habitaciones";
+	$lang["TittleHader9"] = "Fotos";
+	$lang["TittleHader10"] = "Cómo jugar";
+	$lang["TittleHader11"] = "Ranking";
+	$lang["TittleHader12"] = "Ayuda";
+	$lang["TittleHader13"] = "Debe Hacer o No";
+	$lang["TittleHader14"] = "FanSites";
 
 	//Settings -- Mezz -------------------------------------------------------------------------------------
 
@@ -815,6 +833,42 @@ $lang["tutoapp1"] = "Tutorial App";
 	$lang["Spassworddesc"] = "Elija una contraseña segura, asegúrese de que nadie aquí pueda descifrar su contraseña.";
 
 	$lang["SettingsButton"] = "Guardar";
+
+	//Reports -- Mezz ----------------------------------------------------------------------------------------
+
+	$lang["TitutloReport"] = "Título del Report";
+	$lang["Descriporeport"] = "Ingrese un título para su problema";
+	$lang["TituloReportCategoria"] = "Categoria";
+	$lang["ReportOption1"] = "Problema tecnico";
+	$lang["ReportOption2"] = "Problema en la tienda";
+	$lang["ReportOption3"] = "Problema de Moderación";
+	$lang["ReportOption4"] = "Problema con los furnis";
+	$lang["ReportOption5"] = "Furnis faltantes";
+	$lang["ReportOption6"] = "Reportar un Staff";
+	$lang["ReportOption7"] = "Sugerencias";
+	$lang["ReportDescOptions"] = "Elija la categoría que mejor se adapte a su problema";
+	$lang["ReportTituloComent"] = "Describe tu Problema";
+	$lang["ReportDescDetail"] = "Escribe tu problema en detalle";
+
+	$lang["ReportListOpen"] = "Abiertos";
+	$lang["ReportListTratamiento"] = "Tratamiento";
+	$lang["ReportListClose"] = "Cerrados";
+
+	$lang["ReportTituloGet"] = "Reporte";
+	$lang["Reportcatetorias1get"] = "Categoría";
+	$lang["Reportcatetorias2get"] = "Problema";
+	$lang["Reportcatetorias3get"] = "Fecha de Creación";
+	$lang["Reportcatetorias4get"] = "Staff Responsable";
+	$lang["Reportnotfoundget"] = "¡Página no encontrada!";
+	$lang["Reportnotexistget"] = "¡Esta página no existe!";
+	$lang["Reportnewquestget"] = "Nueva pregunta";
+	$lang["Reportquest1get"] = "Pregunta";
+	$lang["Reportdateresponseget"] = "Fecha de Respuesta";
+	$lang["Reportresponsesget"] = "Respuesta";
+	$lang["Reportstaffresponnsesget"] = "Respuesta del Equipo";
+	$lang["Reportresponsesdescget"] = "Hasta el momento su llamada no ha sido respondida. Espere o siéntase libre de hacer más preguntas.";
+	$lang["Reportrespondereportget"] = "Responder Reporte";
+	$lang["Reportquestionuserget"] = "¡Haga su pregunta!";
 
 	//Error 404 -- Mezz -------------------------------------------------------------------------------------
 

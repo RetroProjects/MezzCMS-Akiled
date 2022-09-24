@@ -15,34 +15,34 @@ $report = $getReport->fetch();
 
   <div class="page-content-collider-content-settings-right-side-item">
     <div class="page-content-collider-content-settings-right-side-item-column">
-      <h3 class="page-content-collider-content-settings-right-side-item-title">Título del Report:</h3>
+      <h3 class="page-content-collider-content-settings-right-side-item-title"><?= $lang["TitutloReport"] ?>:</h3>
       <input type="text" name="title" id="report" class="page-content-collider-content-settings-right-side-item-input" placeholder="Título del Report">
-      <p class="page-content-collider-content-settings-right-side-item-description">Ingrese un título para su problema</p>
+      <p class="page-content-collider-content-settings-right-side-item-description"><?= $lang["Descriporeport"] ?></p>
     </div>
   </div>
 
   <div class="page-content-collider-content-settings-right-side-item">
     <div class="page-content-collider-content-settings-right-side-item-column">
-      <h3 class="page-content-collider-content-settings-right-side-item-title">Categoria</h3>
+      <h3 class="page-content-collider-content-settings-right-side-item-title"><?= $lang["TituloReportCategoria"] ?></h3>
         <select name="category" id="report" class="page-content-collider-content-settings-right-side-item-input">
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema tecnico") echo 'selected'; ?> value="Problema tecnico">Problema tecnico
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema tecnico") echo 'selected'; ?> value="Problema tecnico"><?= $lang["ReportOption1"] ?>
               </option>
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema en la tienda") echo 'selected'; ?> value="Problema en la tienda">Problema en la tienda</option>
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema de Moderación") echo 'selected'; ?> value="Problema de Moderación">Problema de Moderación</option>
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema con los furnis") echo 'selected'; ?> value="Problema con los furnis">Problema con los furnis</option>
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Furnis faltantes") echo 'selected'; ?> value="Furnis faltantes">Furnis faltantes</option>
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Reportar un Staff") echo 'selected'; ?> value="Reportar un Staff">Reportar un Staff</option>
-              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Sugerencias") echo 'selected'; ?> value="Sugerencias">Sugerencias</option>
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema en la tienda") echo 'selected'; ?> value="Problema en la tienda"><?= $lang["ReportOption1"] ?></option>
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema de Moderación") echo 'selected'; ?> value="Problema de Moderación"><?= $lang["ReportOption2"] ?></option>
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Problema con los furnis") echo 'selected'; ?> value="Problema con los furnis"><?= $lang["ReportOption3"] ?></option>
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Furnis faltantes") echo 'selected'; ?> value="Furnis faltantes"><?= $lang["ReportOption4"] ?></option>
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Reportar un Staff") echo 'selected'; ?> value="Reportar un Staff"><?= $lang["ReportOption5"] ?></option>
+              <option class="page-content-collider-content-settings-right-side-item-input" <?php if ($report['category'] == "Sugerencias") echo 'selected'; ?> value="Sugerencias"><?= $lang["ReportOption6"] ?></option>
         </select>
-        <p class="page-content-collider-content-settings-right-side-item-description">Elija la categoría que mejor se adapte a su problema</p>
+        <p class="page-content-collider-content-settings-right-side-item-description"><?= $lang["ReportDescOptions"] ?></p>
     </div>
   </div>
 
   <div class="page-content-collider-content-settings-right-side-item">
     <div class="page-content-collider-content-settings-right-side-item-column">
-      <h3 class="page-content-collider-content-settings-right-side-item-title">Describe tu Problema</h3>
-        <textarea type="text" name="problem" id="report" class="page-content-collider-content-settings-right-side-item-input" placeholder="Describe tu Problema"></textarea>
-        <p class="page-content-collider-content-settings-right-side-item-description">Escribe tu problema en detalle</p>
+      <h3 class="page-content-collider-content-settings-right-side-item-title"><?= $lang["ReportTituloComent"] ?></h3>
+        <textarea type="text" name="problem" id="report" class="page-content-collider-content-settings-right-side-item-input" placeholder="<?= $lang["ReportTituloComent"] ?>"></textarea>
+        <p class="page-content-collider-content-settings-right-side-item-description"><?= $lang["ReportDescDetail"] ?></p>
     </div>
   </div>
 
