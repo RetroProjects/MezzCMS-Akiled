@@ -1,16 +1,18 @@
 .error {
-  position: unset;
-  margin-top: 0;
-  margin-left: 0;
-  background: #882424;
+  background: rgba(217, 7, 7, .85);
+  border-color: rgba(217, 7, 7, .94);
+  color: #FFFFFF;
+  text-align-last: center;
+  padding: 5px;
+  display: block;
 }
 .errorSucces {
-  position: unset;
-  margin-top: 7px;
-  margin-left: 0;
-  background: #2f762a;
+  background: rgba(7, 217, 77, 0.85);
+  border-color: rgba(7, 217, 77, 0.94);
+  color: #FFFFFF;
+  text-align-last: center;
   padding: 5px;
-  border-radius: 5px;
+  display: block;
 }
 .bottomBar-emoji-secim-box {
   z-index: 1;

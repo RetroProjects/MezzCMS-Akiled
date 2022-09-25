@@ -21131,5 +21131,35 @@ div.tagsinput {
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1; }
+  
+.error {
+  display: none;
+  position: fixed;
+  right: 15px;
+  margin-top:  -120px;
+  background-color: #f44336;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 10px 20px;
+  z-index: 3;
+}
+.succeed {
+  display: none;
+  position: fixed;
+  right: 15px;
+  margin-top: -120px;
+  background-color: #0c8704db;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 10px 20px;
+  z-index: 3;
+}
+
 
 /*# sourceMappingURL=maps/style.css.map */

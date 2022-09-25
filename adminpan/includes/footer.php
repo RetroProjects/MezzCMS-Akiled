@@ -19,6 +19,8 @@
     <script src="<?= $config['hotelUrl'];?>/adminpan/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
     <script src="<?= $config['hotelUrl'];?>/adminpan/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <script src="<?= $config['hotelUrl'];?>/adminpan/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="<?= $config['hotelUrl'];?>/adminpan/assets/vendors/jquery-toast-plugin/jquery.toast.min.js"></script>
+    <script src="<?= $config['hotelUrl'];?>/adminpan/assets/vendors/jquery-toast-plugin//toastDemo.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
     <script src="<?= $config['hotelUrl'];?>/adminpan/assets/js/off-canvas.js"></script>

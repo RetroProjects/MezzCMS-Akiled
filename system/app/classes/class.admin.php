@@ -28,11 +28,11 @@
 
 		/* Alerts */
 		public static function error($errorName) {
-			echo '<script> alertify.set("notifier","position", "bottom-center");</script><script>alertify.error("'.$errorName.'"); </script>';
+			echo '<div class="error" style="display: block;">'.$errorName.'</div>';
 		}
 
 		public static function succeed($errorName) {
-			echo '<script> alertify.set("notifier","position", "bottom-center");</script><script>alertify.success("'.$errorName.'"); </script>';
+			echo '<div class="succeed" style="display: block;">'.$errorName.'</div>SU';
 		}
 		/* Alerts */
 
