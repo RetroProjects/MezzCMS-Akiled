@@ -184,6 +184,7 @@
 					case "settingspassword":
 					case "settingsemail":
 					case "settingshotel":
+				    case "settings_emoji":
 					case "sollicitaties":
 					case "stats":
 					case "game":
