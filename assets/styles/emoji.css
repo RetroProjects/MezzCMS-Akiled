@@ -1,7 +1,7 @@
 .error {
-  background: rgba(217, 7, 7, .85);
-  border-color: rgba(217, 7, 7, .94);
-  color: #FFFFFF;
+  background: rgba(217, 7, 7, 0.85);
+  border-color: rgba(217, 7, 7, 0.94);
+  color: #ffffff;
   text-align-last: center;
   padding: 5px;
   display: block;
@@ -9,7 +9,7 @@
 .errorSucces {
   background: rgba(7, 217, 77, 0.85);
   border-color: rgba(7, 217, 77, 0.94);
-  color: #FFFFFF;
+  color: #ffffff;
   text-align-last: center;
   padding: 5px;
   display: block;
@@ -17,8 +17,8 @@
 .bottomBar-emoji-secim-box {
   z-index: 1;
   margin-left: -35px;
-  width: 525px;
-  height: 269px;
+  width: 32.8125em;
+  height: 16.8125em;
   background: #e5e5e5d4;
   border-radius: 12px;
   box-sizing: initial;
@@ -30,7 +30,7 @@
 }
 .esb-header {
   background: #1e7295;
-  margin: 5px;
+  margin: 0.3125em;
   border-radius: 4px;
   border-top: 3px solid #2b8bb3;
   border-bottom: 3px solid #1a6280;
@@ -42,8 +42,8 @@
   padding: 4px;
 }
 .emojiBottom {
-  left: 88px;
-  bottom: -18px;
+  left: 5.5em;
+  bottom: -1.125em;
   border-bottom-style: solid;
   border-top: 15px solid #e5e5e5d4;
   border-right: 15px solid #0000;
@@ -55,9 +55,9 @@
   backdrop-filter: blur(4px);
 }
 .emoji-list {
-  margin: 9px;
-  height: 235px;
-  width: 533px;
+  margin: 0.5625em;
+  height: 14.6875em;
+  width: 33.3125em;
   overflow-y: scroll;
   overflow-x: hidden;
   list-style: none;
@@ -65,16 +65,166 @@
 
 .emoji-kategori-box {
   width: 97%;
-  height: 12px;
+  height: 0.75em;
   color: #083b50;
   font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 17px;
+  font-size: 1.125em;
+  margin-bottom: 1.0625em;
   float: left;
 }
 .emojibox {
-  width: 28.5px;
-  height: 30px;
+  width: 1.7813em;
+  height: 1.875em;
+  background: #0000001c;
+  padding: 1px 2px 2px;
+  font-size: 21px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: initial;
+}
+.emojibox:hover {
+  transition-delay: 0ms;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.error {
+  background: rgba(217, 7, 7, 0.85);
+  border-color: rgba(217, 7, 7, 0.94);
+  color: #ffffff;
+  text-align-last: center;
+  padding: 5px;
+  display: block;
+}
+.errorSucces {
+  background: rgba(7, 217, 77, 0.85);
+  border-color: rgba(7, 217, 77, 0.94);
+  color: #ffffff;
+  text-align-last: center;
+  padding: 5px;
+  display: block;
+}
+.bottomBar-emoji-secim-box {
+  z-index: 1;
+  margin-left: -35px;
+  width: 32.8125em;
+  height: 16.8125em;
+  background: #e5e5e5d4;
+  border-radius: 12px;
+  box-sizing: initial;
+  filter: drop-shadow(2px 4px 6px #00000069);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-color: white;
+  border-style: groove;
+}
+.esb-header {
+  background: #1e7295;
+  margin: 0.3125em;
+  border-radius: 4px;
+  border-top: 3px solid #2b8bb3;
+  border-bottom: 3px solid #1a6280;
+  text-align: center;
+  font-size: 14px;
+  font-family: arial;
+  color: #e9f1f5;
+  font-weight: 700;
+  padding: 4px;
+}
+.emojiBottom {
+  left: 5.5em;
+  bottom: -1.125em;
+  border-bottom-style: solid;
+  border-top: 15px solid #e5e5e5d4;
+  border-right: 15px solid #0000;
+  border-bottom-color: #0000;
+  border-left: 15px solid #0000;
+  color: #000;
+  box-sizing: initial;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.emoji-list {
+  margin: 0.5625em;
+  height: 14.6875em;
+  width: 33.3125em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+.emoji-kategori-box {
+  width: 97%;
+  height: 0.75em;
+  color: #083b50;
+  font-weight: 700;
+  font-size: 1.125em;
+  margin-bottom: 1.0625em;
+  float: left;
+}
+.emojibox {
+  width: 1.7813em;
+  height: 1.875em;
   background: #0000001c;
   padding: 1px 2px 2px;
   font-size: 21px;
