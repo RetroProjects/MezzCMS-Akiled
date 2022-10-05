@@ -26,7 +26,7 @@ Clic <a href="https://imgur.com/a/ut1BSN8" target="_blank">aquí</a> para ver la
 
 * Codificando el CMS para Akiled - <a href="https://github.com/DevHabbos">Kaio (*DevHabbos*)</a>
 * Diseño Mezz CMS - <a href="https://github.com/yilmazev">Yilmaz</a>
-* Emulador Akiled y otros - <a href="https://github.com/Dark25">Lúcifer</a>
+* Emulador Akiled, correcciones y otros - <a href="https://github.com/Dark25">Lúcifer</a>
 
 ### Discord Recursos Holos
 
