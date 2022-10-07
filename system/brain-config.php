@@ -49,7 +49,7 @@ $hotel['swfLink'] = "http://swfs.localhost/c_images/album1584/";
 $config['lookUrl'] = "http://swfs.localhost/avatar/avatarimage.php?figure=";
 $config['pathswf'] = "http://swfs.localhost"; 
 
-/* Email Settings - Configuración de correo electronico */
+/* Email Settings - Configuración de correo electrónico */
 $email['mailServerHost'] = 'smtp.gmail.com'; // Email Server Host - Correo de servidor de Alojamiento.
 $email['mailServerPort'] = 587; // Email Post Server - Puerto de correo de servidor.
 $email['SMTPSecure'] = 'TLS'; // Secure SMTP - Seguridad SMTP.
