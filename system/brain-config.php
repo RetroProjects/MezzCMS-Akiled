@@ -1,45 +1,45 @@
 <?php
 if (!defined('BRAIN_CMS')) {
-	die('Sorry but you cannot access this file!');
+	die('Lo sentimos, pero no se puede acceder a este archivo.');
 }
 
-/* Database Setting */
-$db['host'] = '127.0.0.1'; //Mysql's Host
-$db['port'] = '3306'; //Mysql's port
-$db['user'] = "root"; //Mysql's user
-$db['pass'] = ''; //Mysql's password
-$db['db'] = "akiled2"; //Mysql's database
+/* Database Setting - Configuración de Base de Datos.*/
+$db['host'] = '127.0.0.1'; // Mysql's Host - Host (Alojamiento) MySql.
+$db['port'] = '3306'; // Mysql's port - Puerto MySql.
+$db['user'] = "root"; // Mysql's user - Usuario MySql.
+$db['pass'] = ''; // Mysql's password - Contraseña MySql.
+$db['db'] = "mezz"; // Mysql's database - Nombre de base de datos MySql. 
 
-/* Emu Settings */
+/* Emu Settings - Configuración de Emulador */
 $config['hotelEmu'] = 'plusemu'; // plusemu // arcturus
-/*Creditos */
-$hotel['credits'] = 'Genaro Carrillo, Letex & Carlos Mota';
-$hotel['version'] = 'Slopt CMS'; //CMS
-$hotel['cache'] = '232323'; //Cache
 
-/* Website Setting */
-$config['hotelUrl'] = "http://mezz.localhost"; //Address of your hotel. Does not end with a "/"
-$config['skin'] = "mezz"; //Skin/template of your website
-$config['lang'] = "es"; //Language of your website en/nl/es
-$config['hotelName'] = "Hionix"; //Name of your hotel
-$config['favicon'] = "http://mezz.localhost/favicon.ico";
-$config['staffCheckHk'] = true; //Enable the staff pin in the housekeeping (true) or disable it (false)
-$config['staffCheckHkMinimumRank'] = 15; //Minium staff rank to get the staff pin in the housekeeping
-$config['maintenance'] = false; //Enable the maintenance of your website (true) or disable it (false)
-$config['AvatarURL'] = "http://swfs.localhost/avatar/avatarimage.php?figure=";
-$config['userLikeEnable'] = true; // Enable user likes
-$config['newsCommandEnable'] = true; //Enable news commands
-$config['newsCommandFilter'] = true; //Enable wordfilter on news commands (the filter use the db tabels wordfilter and wordfilter_characters)
-$config['alertReferrer'] = false;
-$config['alert'] = ''; //Alert message. If you don't want a alert, you do leave it blank.
-$config['brainversion'] = '1.9.1'; // Please do not change.
-$config['alertReferrer'] = true;
-$config['RankMin'] = "12"; //Autoridad para entrar a la hk
-$config['RankMax'] = "18"; //Todos los pluggin de la hk
-$config['preciovip'] = "30"; //Precio VIP mes
-$config['precioloteria'] = "30"; //Precio loteria mes
-$config['homeRoom'] = "2104";
-$config['onlineCounter'] = true;
+/* Greetings and Credits - Saludos y Creditos */
+$hotel['credits'] = 'Genaro Carrillo, Letex, Carlos Mota & Delevoped BrainCMS';
+$hotel['version'] = 'Mezz CMS'; // CMS
+$hotel['cache'] = '232323'; // Cache
+
+/* Website Setting - Configuración del sitio web */
+$config['hotelUrl'] = "http://mezz.localhost"; // Address of your hotel. Does not end with a "/" - Dirección de su hotel. no termina con "/".
+$config['skin'] = "mezz"; // Skin/template of your website - Plantilla de tú sitio web.
+$config['lang'] = "es"; // Language of your website en/nl/es - Lenguaje de tú sitio web en/es/es1/nl.
+$config['hotelName'] = "Mezz"; // Name of your hotel - Nombre de tú hotel.
+$config['favicon'] = "http://mezz.localhost/favicon.ico"; // Favicon of your website - Icono de tú sitio web.
+$config['staffCheckHk'] = true; // Enable the staff pin in the housekeeping (true) or disable it (false) - Habilitar el pin del personal en el panel de administración (true) o deshabilitarlo (false).
+$config['staffCheckHkMinimumRank'] = 15; // Minimum staff rank to get the staff pin in the housekeeping - Rango mínimo de personal para obtener el pin de personal en el panel de administración.
+$config['maintenance'] = false; // Enable the maintenance of your website (true) or disable it (false) - Habilitar el mantenimiento de su sitio web (true) o deshabilitarlo (false).
+$config['AvatarURL'] = "http://swfs.localhost/avatar/avatarimage.php?figure="; // Avatar style when you sign up - Estilo de avatar cuando se registra.
+$config['userLikeEnable'] = true; // Enable user likes - Habilitar reacciones de usuario.
+$config['newsCommandEnable'] = true; // Enable news commands - Habilitar comandos de noticias.
+$config['newsCommandFilter'] = true; // Enable word filter on news commands (the filter use the db tables word filter and word filter characters) - Habilite el filtro de palabras en los comandos de noticias (el filtro usa las tablas de base de datos, el filtro de palabras y los caracteres del filtro de palabras).
+$config['alertReferrer'] = false; // Referral alert - Habilitar alerta de referidos (true) o deshabilitarlo (false).
+$config['alert'] = ''; // Alert message. If you don't want a alert, you do leave it blank - Mensaje de alerta. Si no desea una alerta, déjelo en blanco.
+$config['brainversion'] = '1.9.1'; // Please do not change - Versión, inmodificable.
+$config['RankMin'] = "12"; // Minimum authorization to enter the housekeeping - Minimum authorization to enter the administration panel.
+$config['RankMax'] = "18"; // Website max rank - Rango máximo del sitio web.
+$config['preciovip'] = "30"; // VIP price per month - Precio VIP por mes.
+$config['precioloteria'] = "30"; // Lottery price month - Precio de lotería mes.
+$config['homeRoom'] = "2104"; // Welcome Room - Sala de Bienvenida.
+$config['onlineCounter'] = true; // Counter of users - Contador de usuarios. 
 $config['groupBadgeURL'] = "http://mezz.localhost/habbo-imaging/badge.php?badge=";
 $config['roomthumball'] = "http://mezz.localhost/newfoto/thumbnail/";
 $config['roomphotos'] = "http://swfs.localhost/newfoto/photos/";
@@ -47,55 +47,57 @@ $config['badgeURL'] = "http://swfs.localhost/c_images/album1584/";
 $config['badgeURLu'] = "http://mezz.localhost/swfs/c_images/placas/";
 $hotel['swfLink'] = "http://swfs.localhost/c_images/album1584/";
 $config['lookUrl'] = "http://swfs.localhost/avatar/avatarimage.php?figure=";
-$config['pathswf'] = "http://swfs.localhost";
+$config['pathswf'] = "http://swfs.localhost"; 
 
-/* Email Settings */
-$email['mailServerHost'] = 'smtp.gmail.com';
-$email['mailServerPort'] = 587;
-$email['SMTPSecure'] = 'TLS';
-$email['mailUsername'] = 'gmail@gmail.com';
-$email['mailPassword'] = '*****';
-$email['mailLogo'] = 'http://127.0.0.1/templates/brain/style/images/logo/logo.png';
-$email['mailTemplate'] = '/system/app/plugins/PHPmailer/temp/resetpassword.html';
+/* Email Settings - Configuración de correo electrónico */
+$email['mailServerHost'] = 'smtp.gmail.com'; // Email Server Host - Correo de servidor de Alojamiento.
+$email['mailServerPort'] = 587; // Email Post Server - Puerto de correo de servidor.
+$email['SMTPSecure'] = 'TLS'; // Secure SMTP - Seguridad SMTP.
+$email['mailUsername'] = 'gmail@gmail.com'; // Email user - Correo de usuario.
+$email['mailPassword'] = '*****'; // Email password - Contraseña de correo.
+$email['mailLogo'] = 'http://127.0.0.1/templates/brain/style/images/logo/logo.png'; // Email Logo - Logotipo de Correo.
+$email['mailTemplate'] = '/system/app/plugins/PHPmailer/temp/resetpassword.html'; // Email Template - Plantilla de Correo.
 
-/* Social settings */
-$config['instagram'] = 'https://www.instagram.com/comunidad_hionix/';
-$config['radio'] = '';
-$config['snapchat'] = '#';
-$config['discord'] = 'https://discord.gg/uJJFauQ3pa';
-$config['facebook'] = 'https://www.facebook.com/Comunidad_hionix-101414134972034/';
-$config['facebookEnable'] = false;
-$config['twitter'] = '#';
-$config['twitterEnable'] = false;
+/* Social settings - Configuración de redes sociales. */
+$config['instagram'] = 'https://www.instagram.com/comunidad_hionix/'; // URL Account Instagram - URL Cuenta de instragram.
+$config['radio'] = ''; // URL Radio.
+$config['snapchat'] = '#'; // URL Account SnapChat - URL Cuanta de SnapChat.
+$config['discord'] = 'https://discord.gg/uJJFauQ3pa'; // URL Guild Discord - URL Servidor de Discord.
+$config['facebook'] = 'https://www.facebook.com/Comunidad_hionix-101414134972034/'; // URL Page Facebook - URL Página de Facebook.
+$config['facebookEnable'] = false; // Enable Facebook display (true) or disable (false).
+$config['twitter'] = '#'; // URL Account Twitter - URL Cuenta de Twitter.
+$config['twitterEnable'] = false; // Enable Twitter display (true) or disable (false).
 
-/* Register Setting */
-$config['startMotto'] = "Hola Soy Nuevo En hionix"; //Register start motto
-$config['credits']	= "1000";
-$config['duckets']	= "0";
-$config['diamonds']	= "0";
-$config['diamondsRef']	= "0";
-$config['registerEnable'] = true;
-$config['look'] = "ch-3668-110-100.fa-3276-72.cc-3867-73-73.ha-3478-110.lg-30061-82-92.sh-290-92.hd-180-1.hr-3163-1404";
+/* Register Setting - Configuracióon de Registro */
+$config['startMotto'] = "Soy nuevo en Mezz"; // Register start motto - Regístro de lema de registro.
+$config['credits']	= "0"; // Credits - Créditos.
+$config['duckets']	= "0"; // Duckets
+$config['diamonds']	= "0"; // Diamonds - Diamantes.
+$config['diamondsRef']	= "0"; // Referral diamonds - Diamantes de referido.
+$config['registerEnable'] = true; // Enable register (true) or disable (false) - Habilitar registro (true) o deshabilitar (false).
+$config['look'] = "ch-3668-110-100.fa-3276-72.cc-3867-73-73.ha-3478-110.lg-30061-82-92.sh-290-92.hd-180-1.hr-3163-1404"; // Avatar style when you sign up - Estilo de avatar cuando se registra. 
 
 /* Google recaptcha Site Key  
-	   Go to this website to create a recaptcha Site Key: https://www.google.com/recaptcha/intro/index.html	*/
-$config['recaptchaSiteKey'] = "";
-$config['recaptchaSiteKeyEnable'] = false;
+	Go to this website to create a recaptcha Site Key: https://www.google.com/recaptcha/intro/index.html	*/
+/* Google clave de sitio de recaptcha
+	Diríjase a este sitio web para crear una clave de sitio de recaptcha: https://www.google.com/recaptcha/intro/index.html */
+$config['recaptchaSiteKey'] = ""; // URL recaptcha Site Key - URL de clase de sitio repcaptcha.
+$config['recaptchaSiteKeyEnable'] = false; // Enable recaptcha in website (true) or disable (false).
 
-/* App */
-$config['urlApp'] = "https://google.com";
-$config['urlAppWindows'] = "https://www.microsoft.com/pt-br/software-download/windows11";
-$config['urlAppMac'] = "https://support.apple.com/pt_BR/downloads/macos";
+/* App - Aplicación */
+$config['urlApp'] = "https://google.com"; // URL App - Url de aplicación.
+$config['urlAppWindows'] = "https://www.microsoft.com/pt-br/software-download/windows11"; // URL App Windows - URl de aplicación Windows.
+$config['urlAppMac'] = "https://support.apple.com/pt_BR/downloads/macos"; // URL App MacOS - URl de aplicación MacOS.
 
-/* Buy VIP Settings */
-$config['vipCost'] = "25";
-$config['vipRankToGet'] = "2";
-$config['vipBadge'] = "vip";
+/* Buy VIP Settings - Configuración de compra VIP */
+$config['vipCost'] = "25"; // Cost VIP - Costo VIP.
+$config['vipRankToGet'] = "2"; // Get rank per buy (id rank) - Obtener rango por compra (id rango).
+$config['vipBadge'] = "vip"; // Get badge per buy (badge code) - Obtener insignia por compra (código de insigna).
 
-/* Ftp Setting */
-$config['IP'] = "";
-$config['usuario']	= "";
-$config['password']	= "";
+/* Ftp Setting - Configuración de FTP */
+$config['IP'] = ""; // IP FTP - Ip FTP.
+$config['usuario']	= ""; // User account FTP - Cuento de usuario FTP.
+$config['password']	= ""; // Password account FTP - Contraseña de usuario FTP.
 
 switch ($config['hotelEmu']) {
 	case "arcturus":

@@ -6,7 +6,7 @@
 	
 	$lang["NameHotel"] = $config['hotelName']." Hotel";
 	$lang["Userson"] = "Usuarios conectados";
-	$lang["DescHotel"] = "Virtual World, Avatar Chat and Pixel Art";
+	$lang["DescHotel"] = "Mundo Virtual, Avatar Chat and Pixel Art";
 	
 	//Index------------------------------------------------------------------------------------------
 	$lang["Itittle"] = "Iniciar sesión";
@@ -31,8 +31,8 @@
 	$lang["Imsj12"] = "Mantenemos a Hionix siempre actualizado añadiendo contenido propio. ¡Verás cosas nunca vistas!";
 	$lang["Imsj13"] = "Somos un hotel donde nos preocupamos por tí. Siempre tendrás disponible al equipo administrativo para ayudarte. Podrás poner al límite tu imaginación creando cosas únicas y divirtiéndote. ¡Recuerda que Hionix es un hotel privado y solo se accede con un codigo de invitacion!";
 	$lang["Imsj14"] = "El mantenimiento finalizará en:";
-	$lang["Pcookies"]= "Politica de Cookies";
-	$lang["Terminos"]= "Terminos y Condiciones";
+	$lang["Pcookies"]= "Política de Cookies";
+	$lang["Terminos"]= "Términos y Condiciones";
 
 
 	$lang["Ilogin"] = "Iniciar Sesión";
@@ -42,15 +42,15 @@
 	$lang["Ilogar"] = "Vamos";
 	$lang["Inoaccount"] = "¿No tienes una cuenta? ¡Únete ahora!";
 	$lang["Idesclogin"] = "¡Comunidad virtual en línea donde puedes crear tu propio avatar, hacer amigos, chatear, crear salas y mucho más!";
-	$lang["Iinfo1"] = "Informaciónes del Servidor";
+	$lang["Iinfo1"] = "Información del servidor";
 	$lang["Iinfo2"] = "Encuentre información importante del servidor aquí.";
 
 	//Formularios-----------------------------------------------------------------------------------------
 	$lang["Iusername"] = "Nombre de usuario";
 	$lang["Ipassword"] = "Contraseña";
-	$lang["Rcodigo"] = "Codigo de seguridad";
-	$lang["Remail"] = "Correo electronico";
-	$lang["Rrepeatpassword"] = "Repetir contraseña";
+	$lang["Rcodigo"] = "Código de seguridad";
+	$lang["Remail"] = "Correo electrónico";
+	$lang["Rrepeatpassword"] = "Repite la contraseña";
 	
 	//Register----------------------------------------------------------------------------------------
 	$lang["Rtittle"] = "Registro";
@@ -63,10 +63,10 @@
 	$lang["Clienttext1"] = "Sala de inicio";	
 	$lang["Clienttext2"] = "Para el usuario que realmente le gustan las cosas brillantes";	
 
-	$lang["Rdescnombre"] = "Deberá usar este nombre de usuario para iniciar sesión en Hotel en el futuro. ¡No lo olvide!";
+	$lang["Rdescnombre"] = "Deberás usar este nombre de usuario para iniciar sesión en Hotel en el futuro. ¡No lo olvide!";
 	$lang["Rdescmission"] = "Ingrese su misión de Hotel aquí, o deje el valor predeterminado.";
 	$lang["Rdescemail"] = "Deberá usar esta dirección de correo electrónico para recuperar la contraseña. Utilice una dirección válida.";
-	$lang["Rdescpassword"] = "Usar por lo menos 6 caracteres. Incluya al menos una letra y al menos un número o carácter especial.";
+	$lang["Rdescpassword"] = "Usar por lo menos 6 carácteres. Incluya al menos una letra y al menos un número o carácter especial.";
 	$lang["Rtermos1"] = "Acepto los términos de servicio, política de privacidad y política de cookies.";
 	$lang["Rtermos2"] = "¡Mantenme informado sobre los últimos acontecimientos, noticias y chismes de Hotel!";
 	$lang["Rbutton"] = "Registrar Cuenta";
