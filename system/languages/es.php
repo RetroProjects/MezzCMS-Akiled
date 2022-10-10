@@ -651,6 +651,8 @@
 	$lang["HkSettings11"] = "Rango minimo para acceder al login staff";
 	$lang["HkSettings12"] = "0";
 	$lang["HkSettings13"] = "1";
+	$lang["HkSettings15"] = "IP";
+	$lang["HkSettings16"] = "PORT";
 	
 	//Pin--------------------------------------------------------------------------------------
 	$lang["Pintitu1"] = "Ingresa tu pin para continuar";

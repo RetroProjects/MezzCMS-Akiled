@@ -30,6 +30,8 @@
 	$config['diamonds']	= $conhk["diamonds"];
 	$hotel['homeRoom'] = $conhk["home_room"]; //Establezca la habitación de inicio cuando llegue al hotel
 	$hotel['RadioClient'] = $conhk["radio"];
+	$config['RCONIP'] = $conhk["rcon_ip"];
+	$config['RCONPORT'] = $conhk["rcon_port"];
 	if($conhk["maintenance"]=="true"){ $config['maintenance']=true; } else { $config['maintenance']=false;} //Enable the maintenance of your website (true) or disable it (false)
 	$config['maintenancekMinimumRankLogin'] = $conhk["rank_maintenance"]; //Minium staff rank to login when the website is in maintenance
 ?>			

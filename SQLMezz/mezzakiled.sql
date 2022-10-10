@@ -95,3 +95,7 @@ CREATE TABLE `cms_reportsreply` (
 #
 # Data for table "cms_reportsreply"
 #
+
+ALTER TABLE`slopt_cms`
+ ADD `rcon_ip` varchar(255) DEFAULT '',
+ ADD `rcon_port` varchar(255) DEFAULT '';

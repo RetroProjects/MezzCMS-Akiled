@@ -97,6 +97,35 @@ admin::CheckRank(19);
                     </div>
                 </div>
                 <?php
+                if (isset($_POST['rcon'])) {
+                    $upateUser = $dbh->prepare("UPDATE slopt_cms SET 
+				rcon_ip=:rconip,rcon_port=:rconport");
+                    $upateUser->bindParam(':rconip', $_POST['rconip']);
+                    $upateUser->bindParam(':rconport', $_POST['rconport']);
+                    $upateUser->execute();
+                    header('Location:/adminpan/settings');
+                }
+                ?>
+                <div class="col-md-4 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">RCON</h4>
+                            <p class="card-description">Configura el rcon para actualizar alguns fucniones desde el panel </p>
+                            <form class="forms-sample" name="mygallery" action="" method="POST">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4"><?= $lang["HkSettings15"]; ?></label>
+                                    <input type="text" value="<?= $config['RCONIP']; ?>" name="rconip" class="form-control" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4"><?= $lang["HkSettings16"]; ?></label>
+                                    <input type="text" value="<?= $config['RCONPORT']; ?>" name="rconport" class="form-control" autocomplete="off">
+                                </div>
+                                <button name="rcon" type="submit" class="btn btn-primary mr-2">Guardar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <?php
                 if (isset($_POST['mantenimiento'])) {
                     $upateUser = $dbh->prepare("UPDATE slopt_cms SET 
 				maintenance=:maintenance,

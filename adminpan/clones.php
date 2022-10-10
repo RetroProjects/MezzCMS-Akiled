@@ -39,6 +39,7 @@
               </div>
             </div>
 
+
             <?php
             if (isset($_POST['cloner'])) {
               $getArticles = $dbh->prepare("SELECT username,ip_reg FROM users WHERE username = '" . $_POST['user'] . "' ");
