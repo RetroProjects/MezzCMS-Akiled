@@ -77,7 +77,8 @@
               <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/permissions">Editar Rangos</a></li>
               <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/tareas">Tareas</a></li>
               <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/comandos">Comandos</a></li>
-             <!--  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Estadísticas usuarios</a></li> -->
+              <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/update">Update</a></li>
+              <!--  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Estadísticas usuarios</a></li> -->
             
           </ul>
         </div>
