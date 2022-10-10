@@ -2190,7 +2190,8 @@ class Admin
 	/* Others */
 	/* RCON */
 	public static function RCON()
-	{global $config;
+	{
+		global $config;
 
 		function RconEmuLDR($command, $data, $ipvp2s, $mus)
 		{
@@ -2203,7 +2204,7 @@ class Admin
 
 
 		if (isset($_POST['updatecata'])) {
-			
+
 			RconEmuLDR('updatecata', '1', $config['RCONIP'], $config['RCONPORT']);
 			$action = 'Ha actualizado el catalogo';
 			Admin::InsertLog($action);
@@ -2218,6 +2219,21 @@ class Admin
 			$action = 'Ha actualizado los comandos';
 			Admin::InsertLog($action);
 			Admin::succeed("¡Comandos actualizado con exito!");
+		} elseif (isset($_POST['updateexternaltext'])) {
+			RconEmuLDR('updateexternaltext', '1', $config['RCONIP'], $config['RCONPORT']);
+			$action = 'Ha actualizado el external_text';
+			Admin::InsertLog($action);
+			Admin::succeed("¡External_text actualizado con exito!");
+		} elseif (isset($_POST['updatenavigator'])) {
+			RconEmuLDR('updatenavigator', '1', $config['RCONIP'], $config['RCONPORT']);
+			$action = 'Ha actualizado el navegador de salas';
+			Admin::InsertLog($action);
+			Admin::succeed("¡Navegador de salas actualizado con exito!");
+		} elseif (isset($_POST['updatepermissions'])) {
+			RconEmuLDR('updatepermissions', '1', $config['RCONIP'], $config['RCONPORT']);
+			$action = 'Ha actualizado los permisos del hotel';
+			Admin::InsertLog($action);
+			Admin::succeed("Permisos actualizados con exito!");
 		}
 	}
 }

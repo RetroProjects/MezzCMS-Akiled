@@ -83,6 +83,61 @@ admin::CheckRank(13);
       </div>
     </div>
   </div>
+  <div class="col-lg-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Lenguaje del hotel</h4>
+        <p class="card-description"> Actualiza el leenguaje del hotel <code>(Real Time)</code>
+        </p>
+        <div class="table-responsive " style=" max-height: 350px;">
+
+          <form name="mygallery" action="" method="POST">
+            <input type="hidden" value="" name="updateexternaltext" class="form-control" disable>
+            <div class="input-group-append" style="margin: auto; width: 60%; padding: 10px;">
+              <button class="btn btn-success mr-2" id="btn" type="submit" name="RCON">Actualizar
+              </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-lg-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Navegador de salas</h4>
+        <p class="card-description"> Actualiza el Navegador de salas del hotel <code>(Real Time)</code>
+        </p>
+        <div class="table-responsive " style=" max-height: 350px;">
+          <form name="mygallery" action="" method="POST">
+            <input type="hidden" value="" name="updatenavigator" class="form-control" disable>
+            <div class="input-group-append" style="margin: auto; width: 60%; padding: 10px;">
+              <button class="btn btn-primary mr-2" id="btn" type="submit" name="RCON">Actualizar
+              </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-lg-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Permisos de Rangos</h4>
+        <p class="card-description"> Actualiza los permisos de rangos del hotel <code>(Real Time)</code>
+        </p>
+        <div class="table-responsive " style=" max-height: 350px;">
+          <form name="mygallery" action="" method="POST">
+            <input type="hidden" value="" name="updatepermissions" class="form-control" disable>
+            <div class="input-group-append" style="margin: auto; width: 60%; padding: 10px;">
+              <button class="btn btn-warning mr-2" id="btn" type="submit" name="RCON">Actualizar
+              </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
   </div>
   <!-- content-wrapper ends -->
