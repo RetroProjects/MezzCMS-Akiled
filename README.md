@@ -29,6 +29,6 @@ Clic <a href="https://imgur.com/a/ut1BSN8" target="_blank">aquí</a> para ver la
 * Diseño Mezz CMS - <a href="https://github.com/yilmazev">Yilmaz</a>
 * Emulador Akiled, correcciones y otros - <a href="https://github.com/Dark25">Lúcifer</a>
 
-### Discord Recursos Holos
+### Discord Recursos Holos:
 
 * <a href="https://discord.gg/5wBCvuB9d8">https://discord.gg/5wBCvuB9d8</a>
