@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 	 Wait 3 sec..</p>";
 	 
 	 //path
-     $path ='http://localhost/adminpan/Onesignal/'
+     $path ='http://localhost/adminpan/Onesignal/';
     
       //Javascript redirect after 5 sec    
       echo $success ="<script>

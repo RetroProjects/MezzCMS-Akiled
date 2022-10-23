@@ -797,7 +797,9 @@ $lang["tutoapp1"] = "Tutorial App";
 	<p class='page-content-collider-content-shop-right-side-box-content-text'><b class='page-content-collider-content-shop-right-side-box-content-text -bold'>Todas las formas legítimas de comprar créditos se muestran aquí o en la tienda del juego. Comprarlos en otro lugar puede hacer que te estafen y te prohíban.</b></p>
 	<p class='page-content-collider-content-shop-right-side-box-content-text'>Habbo tiene diferentes límites de gasto para diferentes opciones de pago. Todos se enumeran en nuestros <a href='#' target='_blank' class='page-content-collider-content-shop-right-side-box-content-text-url'>Límites de gasto</a> en Habbo Helpdesk.</p>
 	<p class='page-content-collider-content-shop-right-side-box-content-text'>Recibí una consulta sobre su <b class='page-content-collider-content-shop-right-side- box-content-text-bold'>¿Cuenta Habbo, una compra o una función?</b> Encuentra tu respuesta en la <a href='#' target='_blank' class='page-content-collider-content- shop-right-side-box-content-text-url'>Mesa de ayuda de Habbo.</a></p>";
-	
+	$lang["NnotfoundheaderMezz"] = "No se han encontrado  paquetes.!";
+	$lang["Nnotfoundtxtmezz"] = "Desafortunadamente, esta noticia no se ha encontrado!";
+	$lang["Nnotfoundtxtmezz2"] = "Desafortunadamente, no tienes paquetes activos!";
 	//Title Pages -- Mezz ----------------------------------------------------------------------------------------
 
 	$lang["TittleHader"] = "Tienda";
@@ -815,6 +817,9 @@ $lang["tutoapp1"] = "Tutorial App";
 	$lang["TittleHader12"] = "Ayuda";
 	$lang["TittleHader13"] = "Debe Hacer o No";
 	$lang["TittleHader14"] = "FanSites";
+	$lang["TittleHader15"] = "General ";
+	$lang["MwhShopcofre"] = "Cofres";
+	
 
 	//Settings -- Mezz -------------------------------------------------------------------------------------
 

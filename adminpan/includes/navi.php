@@ -155,6 +155,7 @@
               <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/infosindex">Infos Index</a></li>
               <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/fansites">Fan Sites</a></li>
               <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/eventos">Eventos</a></li>
+              <li class="nav-item"> <a class="nav-link" href="<?= $config['hotelUrl'];?>/adminpan/Shopy">Tineda Mezz</a></li>
             </ul>
           </div>
         </li>

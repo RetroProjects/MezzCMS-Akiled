@@ -99,3 +99,40 @@ CREATE TABLE `cms_reportsreply` (
 ALTER TABLE`slopt_cms`
  ADD `rcon_ip` varchar(255) DEFAULT '',
  ADD `rcon_port` varchar(255) DEFAULT '';
+ ADD `payclient_id` varchar(255) DEFAULT '';
+
+
+
+#
+# Structure for table "mezz_currency"
+#
+
+ CREATE TABLE `mezz_currency` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `date_shop` int(11) NOT NULL DEFAULT 0,
+  `product` varchar(255) DEFAULT NULL,
+  `reclaim` enum('0','1') NOT NULL DEFAULT '0',
+  `status_paypal` varchar(255) DEFAULT NULL,
+  `id_paypal` varchar(255) DEFAULT NULL,
+  `mail_shop` varchar(255) DEFAULT NULL,
+  `planetas` int(255) DEFAULT NULL,
+  `esmeraldas` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
+
+#
+# Structure for table "mezz_shop"
+#
+
+CREATE TABLE `mezz_shop` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL DEFAULT '0',
+  `esmeraldas` int(11) NOT NULL DEFAULT 0,
+  `planetas` int(11) DEFAULT NULL,
+  `price` varchar(25) NOT NULL DEFAULT '0',
+  `date` varchar(11) NOT NULL DEFAULT '0',
+  `updated` enum('0','1') NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;

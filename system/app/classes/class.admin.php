@@ -13,10 +13,10 @@
 		UpdateUser / UpdateItem / UpdateMueble / UpdateGroup / UpdateRolePlayItems / UpdatePage / UpdateFurniture / UpdateFansite / UpdateRad / UpdatePub / Mante / REG / UpdateFaqs / UpdateBadges / UpdatePublicRoom / UpdateSection / UpdateHappyHour / UpdateUserOfTheWeek / UpdateNews / UpdatePermissions / UpdateTareas / UpdateComandos / UpdateRoomOwner / UpdateInfosIndex / UpdateFanSites / LookSollie1 / ChangeStatusReport
 
 		INSERTS:
-		InsertLog / PostBadges / PostPublicRoom / AddCatalogSection / UploadBadge / UploadCatalogSection / PostWordFilter / Posteventos / PostNews / PostTareas / AddBans / PostCatalogPages / PostBadge / ReplyReport
+		InsertLog / PostBadges / PostPublicRoom / AddCatalogSection / UploadBadge / UploadCatalogSection / PostWordFilter / Posteventos / PostNews / PostShopy / PostTareas / AddBans / PostCatalogPages / PostBadge / ReplyReport
 
 		DELETS:
-		DeleteWordFilter / DeleteCatalogPage / DeleteReport / DeleteFurni / DeleteNews / Deleteventos / DeleteTicket / DeleteChatlogs / DeletePrivativeChatlogs / DeleteRooms / DeleteInfosIndex / DeleteFanSites / DeleteGroup / DeleteBadge / DeletePublicRoom / DeleteCatalogSection / DeleteTareas / DeleteSollie / DeleteBans
+		DeleteWordFilter / DeleteCatalogPage / DeleteReport / DeleteFurni / DeleteNews / Deleteventos / DeleteTicket / DeleteChatlogs / DeletePrivativeChatlogs / DeleteRooms / DeleteInfosIndex / DeleteFanSites / DeleteGroup / DeleteBadge / DeletePublicRoom / DeleteCatalogSection / DeleteTareas / DeleteSollie / DeleteBans / DeleteShopy
 
 		OTHERS:
 		CheckRank / darkmode / RCON
@@ -1658,6 +1658,44 @@ class Admin
 		}
 	}
 
+	public static function Postshopy()
+	{
+		global $dbh, $config;
+		if (isset($_POST['postshopy'])) {
+			$_SESSION['title'] = $_POST['title'];
+			$_SESSION['news'] = $_POST['news'];
+			if (!empty($_POST['title'])) {
+				$postNews = $dbh->prepare("
+							INSERT INTO mezz_shop(title,image,esmeraldas,planetas,price,date)
+							VALUES
+							(
+							:title,
+							:image,
+							:esmeraldas, 
+							:planetas,
+							:price,
+							:time
+							)");
+				$postNews->bindParam(':title', $_POST['title']);
+				$postNews->bindParam(':image', $_POST['image']);
+				$postNews->bindParam(':esmeraldas', $_POST['esmeraldas']);
+				$postNews->bindParam(':planetas', $_POST['planetas']);
+				$postNews->bindParam(':price', $_POST['price']);
+				$postNews->bindParam(':time', time());
+				$postNews->execute();
+				$_SESSION['title'] = '';
+				$_SESSION['kort'] = '';
+				$_SESSION['news'] = '';
+				$action = 'Ha creado una nueva noticia';
+				Admin::InsertLog($action);
+				Admin::succeed("¡Noticia añadida con exito!");
+			} else {
+				Admin::error("no tiene  ningun titulo ");
+				return;
+			}
+		}
+	}
+
 	public static function PostTareas()
 	{
 		global $dbh, $config;
@@ -2166,6 +2204,20 @@ class Admin
 			Admin::succeed('Se a eliminado el ban');
 		}
 	}
+
+	public static function DeleteShopy()
+	{
+		global $dbh, $config;
+		if (isset($_GET['delete'])) {
+			$deleteBan = $dbh->prepare("DELETE FROM mezz_shop WHERE id=:newsid");
+			$deleteBan->bindParam(':newsid', $_GET['delete']);
+			$deleteBan->execute();
+			$action = 'Ha eliminado un paquete cofre';
+			Admin::InsertLog($action);
+			echo '<meta http-equiv="refresh" content="2;URL=' . $config['hotelUrl'] . '/adminpan/Shopy">';
+			Admin::succeed('Se a eliminado el paquete');
+		}
+	}
 	/* Deletes */
 
 	/* Others */
@@ -2195,7 +2247,7 @@ class Admin
 
 		function RconEmuLDR($command, $data, $ipvp2s, $mus)
 		{
-			$rconData = $command . chr(1) . $data;
+			$rconData = $command . chr(1) . implode(':', $data);
 			$rcon = @socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp'));
 			@socket_connect($rcon, $ipvp2s, $mus);
 			@socket_send($rcon, $rconData, strlen($rconData), MSG_DONTROUTE);
@@ -2230,8 +2282,12 @@ class Admin
 			Admin::InsertLog($action);
 			Admin::succeed("¡Navegador de salas actualizado con exito!");
 		} elseif (isset($_POST['updatepermissions'])) {
-			RconEmuLDR('updatepermissions', '1', $config['RCONIP'], $config['RCONPORT']);
-			$action = 'Ha actualizado los permisos del hotel';
+			RconEmuLDR('give', [
+				'userId' => 1,
+				'currency' => 'diamantes',
+				'amount' => 100,
+			], $config['RCONIP'], $config['RCONPORT']);
+			$action = 'Ha actualizado los permisos del hotel ';
 			Admin::InsertLog($action);
 			Admin::succeed("Permisos actualizados con exito!");
 		}

@@ -73,7 +73,7 @@ function custom_template(obj){
         	var text = $(obj.element).text();
         	if(data && data['img_src']){
 	        	img_src = data['img_src'];
-	        	template = $("<div style=\"background-color: #151516;\"><img src=\"" + img_src + "\" style=\"width:355px;height:150px;background-color: #191c24;margin-left: 75px;\"/><p style=\"font-weight: 700;font-size:15px;margin-left:38px;color:#eee;margin-left: 75px;\">" + text + "</p></div>");
+	        	template = $("<div style=\"background-color: #151516;\"><img src=\"" + img_src + "\" style=\"width:355px;height:150px;background-color: #191c24;margin-left: 75px;margin-left: 16px;margin-top:12px;\"/><p style=\"font-weight: 700;font-size:15px;margin-left:38px;color:#eee;margin-left: 75px;\">" + text + "</p></div>");
 	        	return template;
 	        }
         }
