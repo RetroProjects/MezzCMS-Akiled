@@ -917,6 +917,35 @@ class User
 		}
 	}
 
+	/* RCON */
+	public static function RCON()
+	{
+		global $config;
+
+		$user_id = $_POST['userid'];
+		$currency = $_POST['currency'];
+		$amount = $_POST['cantidad'];
+
+		function RconEmuLDR($command, $data, $ipvp2s, $mus)
+		{
+			$rconData = $command . chr(1) . implode(':', $data);
+			$rcon = @socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp'));
+			@socket_connect($rcon, $ipvp2s, $mus);
+			@socket_send($rcon, $rconData, strlen($rconData), MSG_DONTROUTE);
+			@socket_close($rcon);
+		}
+
+		
+		RconEmuLDR('give', [
+			'userId' => $user_id,
+			'currency' => $currency,
+			'amount' => $amount,
+		], $config['RCONIP'], $config['RCONPORT']);
+		
+	
+}
+
+
 	public static function ReportNewQuestion()
 	{
 		global $lang, $dbh;
@@ -942,32 +971,6 @@ class User
 				return;
 			}
 		} else {
-		}
-	}
-	/* RCON */
-	public static function RCON()
-	{
-		global $config;
-
-		function RconEmuLDR($command, $data, $ipvp2s, $mus)
-		{
-			$rconData = $command . chr(1) . implode(':', $data);
-			$rcon = @socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp'));
-			@socket_connect($rcon, $ipvp2s, $mus);
-			@socket_send($rcon, $rconData, strlen($rconData), MSG_DONTROUTE);
-			@socket_close($rcon);
-		}
-
-
-		if (isset($_POST['updatepermissions'])) {
-			RconEmuLDR('give', [
-				'userId' => 1,
-				'currency' => 'diamantes',
-				'amount' => 100,
-			], $config['RCONIP'], $config['RCONPORT']);
-			$action = 'Ha actualizado los permisos del hotel ';
-			Admin::InsertLog($action);
-			Admin::succeed("Permisos actualizados con exito!");
 		}
 	}
 }

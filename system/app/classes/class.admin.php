@@ -2282,11 +2282,7 @@ class Admin
 			Admin::InsertLog($action);
 			Admin::succeed("¡Navegador de salas actualizado con exito!");
 		} elseif (isset($_POST['updatepermissions'])) {
-			RconEmuLDR('give', [
-				'userId' => 1,
-				'currency' => 'diamantes',
-				'amount' => 100,
-			], $config['RCONIP'], $config['RCONPORT']);
+			RconEmuLDR('updatepermissions', '1', $config['RCONIP'], $config['RCONPORT']);
 			$action = 'Ha actualizado los permisos del hotel ';
 			Admin::InsertLog($action);
 			Admin::succeed("Permisos actualizados con exito!");

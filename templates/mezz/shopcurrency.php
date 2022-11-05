@@ -1,5 +1,6 @@
 <?php
 $shop_active = 'active';
+
 ?>
 
 <html lang="en">
@@ -15,6 +16,7 @@ $shop_active = 'active';
 </head>
 
 <body class="container">
+
     <style>
         .errorshop {
             color: #7d3632;
@@ -26,58 +28,76 @@ $shop_active = 'active';
             font-size: 20px;
         }
     </style>
+
     <script src="/assets/scripts/page-load.js"></script>
     <div class="page-content">
         <?php
+
         if (!isset($_SESSION['id'])) {
             include('auth/login.php');
         } else {
             include('auth/logged.php');
         }
         ?>
+
         <?php include_once("includes/menu.php"); ?>
-
-
         <div class="page-content-collider">
             <div class="page-content-max-width" style="flex-direction: column;align-items: flex-start;">
                 <div class="page-content-collider-item">
                     <div class="page-content-collider-content shop">
-                    <?php
-                            if (isset($_POST['pack1'])) {
-                                $belcr_get = $dbh->prepare("SELECT * FROM mezz_currency WHERE user_id = :userid AND id = :product_id  AND reclaim = '0' AND status_paypal LIKE 'COMPLETED'");
-                                $belcr_get->bindParam(':userid', User::userData('id'));
-                                $belcr_get->bindParam(':product_id', $_POST['producid']);
-                                $belcr_get->execute();
-                                if ($belcr_get->RowCount() > 0) {
-                                    if (User::userData('online') == 0) {
-                                        $belcr_shop = $dbh->prepare("SELECT * FROM mezz_currency WHERE user_id = :userid AND id = :product_id  AND reclaim = '0' AND status_paypal LIKE 'COMPLETED' LIMIT 1");
-                                        $belcr_shop->bindParam(':userid', User::userData('id'));
-                                        $belcr_shop->bindParam(':product_id', $_POST['producid']);
-                                        $belcr_shop->execute();
-                                        $shopidpay = $belcr_shop->fetch();
+                   
+                        <?php
+                        if (isset($_POST['pack1'])) {
+                            $belcr_get = $dbh->prepare("SELECT * FROM mezz_currency WHERE user_id = :userid AND id = :product_id  AND reclaim = '0' AND status_paypal LIKE 'COMPLETED'");
+                            $belcr_get->bindParam(':userid', User::userData('id'));
+                            $belcr_get->bindParam(':product_id', $_POST['producid']);
+                            $belcr_get->execute();
 
-                                        $updateshop = $dbh->prepare("UPDATE mezz_currency SET reclaim = '1' WHERE user_id = :userid AND reclaim = '0' AND id_paypal = :idpaypal");
-                                        $updateshop->bindParam(':userid', User::userData('id'));
-                                        $updateshop->bindParam(':idpaypal', $shopidpay["id_paypal"]);
-                                        $updateshop->execute();
+                            if ($belcr_get->RowCount() > 0) {
+                                if (User::userData('online') == 0) {
+                                    $belcr_shop = $dbh->prepare("SELECT * FROM mezz_currency WHERE user_id = :userid AND id = :product_id  AND reclaim = '0' AND status_paypal LIKE 'COMPLETED' LIMIT 1");
+                                    $belcr_shop->bindParam(':userid', User::userData('id'));
+                                    $belcr_shop->bindParam(':product_id', $_POST['producid']);
+                                    $belcr_shop->execute();
+                                    $shopidpay = $belcr_shop->fetch();
 
-                                        $cantidadesmeraldas = $_POST['esmeraldas'];
-                                        $cantidadplanetas = $_POST["planetas"];
-                                        $updatemonedero = $dbh->prepare("UPDATE users SET activity_points = activity_points + :cantidadesmeraldas, vip_points = vip_points + :cantidadplanetas WHERE id = :userid");
-                                        $updatemonedero->bindParam(':cantidadesmeraldas', $cantidadesmeraldas);
-                                        $updatemonedero->bindParam(':cantidadplanetas', $cantidadplanetas);
-                                        $updatemonedero->bindParam(':userid', User::userData('id'));
-                                        $updatemonedero->execute();
+                                    $updateshop = $dbh->prepare("UPDATE mezz_currency SET reclaim = '1' WHERE user_id = :userid AND reclaim = '0' AND id_paypal = :idpaypal");
+                                    $updateshop->bindParam(':userid', User::userData('id'));
+                                    $updateshop->bindParam(':idpaypal', $shopidpay["id_paypal"]);
+                                    $updateshop->execute();
 
-                                        echo '<div style=" background: #41883a; padding-left: 29px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 11px; border-radius: 5px; color: #ffffff; width: 98%; ">Compra cofre de luz azul canjeado correctamente, puedes revisar tu inventario dentro del hotel</div>';
-                                    } else {
-                                        echo '<div style=" background: #a74040; padding-left: 29px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 11px; border-radius: 5px; color: #ffffff; width: 98%; ">Debes estar desconectado del hotel para poder canjearlo</div>';
-                                    }
+                                    $cantidadesmeraldas = $_POST['esmeraldas'];
+                                    $cantidadplanetas = $_POST["planetas"];
+                                    $updatemonedero = $dbh->prepare("UPDATE users SET activity_points = activity_points + :cantidadesmeraldas, vip_points = vip_points + :cantidadplanetas WHERE id = :userid");
+                                    $updatemonedero->bindParam(':cantidadesmeraldas', $cantidadesmeraldas);
+                                    $updatemonedero->bindParam(':cantidadplanetas', $cantidadplanetas);
+                                    $updatemonedero->bindParam(':userid', User::userData('id'));
+                                    $updatemonedero->execute();
+
+                                    echo '<div style=" background: #41883a; padding-left: 29px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 11px; border-radius: 5px; color: #ffffff; width: 98%; ">Compra cofre de luz azul canjeado correctamente, puedes revisar tu inventario dentro del hotel</div>';
                                 } else {
-                                    echo '<div style=" background: #a74040; padding-left: 29px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 11px; border-radius: 5px; color: #ffffff; width: 98%; ">Hubo un error con tu compra, porfavor comunicate con el soporte tecnico del hotel</div>';
+
+
+                        ?>
+                           <?php user::RCON(); ?>
+
+                                    <form method="POST" id="RCON" action="" name="RCON">
+                                        <input type="hidden" name="userid" value="<?= User::userData('id') ?>" />
+                                        <input type="hidden" name="currency" value="esmeraldas" />
+                                        <input type="hidden" name="cantidad" value="<?= $_POST['esmeraldas'] ?>" />
+                                    </form>
+
+                                    <script type="text/javascript">
+                                        document.getElementById("RCON").submit();
+                                    </script>
+
+                        <?php
                                 }
+                            } else {
+                                echo '<div style=" background: #a74040; padding-left: 29px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 11px; border-radius: 5px; color: #ffffff; width: 98%; ">Hubo un error con tu compra, porfavor comunicate con el soporte tecnico del hotel</div>';
                             }
-                            ?>
+                        }
+                        ?>
                         <h1 class="page-content-collider-content-shop-title">Tienda de monedas <?= $config['hotelName'] ?></h1>
                         <div class="page-content-collider-content-shop-column">
                             <div class="page-content-collider-content-shop-left-side">
@@ -102,14 +122,6 @@ $shop_active = 'active';
                                                 $belcr_get->execute();
                                                 if ($belcr_get->RowCount() == 1) {
                                                 ?>
-
-
-
-
-
-
-
-
 
                                                     <?php
                                                     $sql = $dbh->prepare("SELECT * FROM mezz_currency WHERE user_id = :userid AND reclaim = '0'");
