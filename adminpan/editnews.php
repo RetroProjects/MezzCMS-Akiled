@@ -43,18 +43,68 @@ admin::CheckRank(12);
                                     <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo admin::EditNews("shortstory"); ?>" name="shortstory">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Imagen prompcional</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo admin::EditNews("image"); ?>" name="image">
+                                    <label for="text">Imagen prompcional</label>
+                                   <div style=" width: 600px; ">
+
+									<?php
+										echo '<select id="id_select2_example" onChange="showimage()" class="form-control" name="topstory" style="    width: 100%;font-size: 14px;margin-left: 10px;"';
+										if ($handle = opendir(''.$_SERVER['DOCUMENT_ROOT'].'/adminpan/img/newsimages/'))
+										{	
+											while (false !== ($file = readdir($handle)))
+											{
+												echo'';
+												if ($file == '.' || $file == '..')
+												{
+													continue;
+												}	
+												echo '<option name="topstory" data-img_src="'.$config['hotelUrl'].'/adminpan/img/newsimages/' . $file . '" value="'.$config['hotelUrl'].'/adminpan/img/newsimages/' . $file . '"';
+												if (isset($_POST['topstory']) && $_POST['topstory'] == $file)
+												{
+													echo ' selected';
+												}
+												echo '>' . $file . '</option>';
+											}
+										}
+										echo '</select>';
+									?>
+						  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css'>
+			
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js'></script>
+<script>
+function custom_template(obj){
+        	var data = $(obj.element).data();
+        	var text = $(obj.element).text();
+        	if(data && data['img_src']){
+	        	img_src = data['img_src'];
+	        	template = $("<div style=\"background-color: #151516;\"><img src=\"" + img_src + "\" style=\"width:355px;height:150px;background-color: #191c24;margin-left: 75px;margin-left: 16px;margin-top:12px;\"/><p style=\"font-weight: 700;font-size:15px;margin-left:38px;color:#eee;margin-left: 75px;\">" + text + "</p></div>");
+	        	return template;
+	        }
+        }
+	var options = {
+		'templateSelection': custom_template,
+		'templateResult': custom_template,
+	}
+	$('#id_select2_example').select2(options);
+    $('.select2-container--default .select2-selection--single').css({'height': 'auto', 'width' : 'auto', 'background-color': '#191c24'});
+</script>
+									
+									<br>
+									<style>
+										.imagebox {
+										width: auto;
+										background-repeat: repeat-y;
+										border-radius: 6px;
+										background-color: #191c24;
+										float: left;
+										margin-right: 0.72pc;
+										margin-bottom: 10px;
+										}
+									</style>
+									<br><br>
+								</div>
+								</center>
                                     <br>
-
-
-                                    <div class="form-group">
-                                        <center>
-                                            <img src="<?php echo admin::EditNews("image"); ?>" name="topstory" width="500" border=0>
-                                        </center>
-                                    </div>
-                                </div>
-                                <center>
 
                                 <br><br>
                            
