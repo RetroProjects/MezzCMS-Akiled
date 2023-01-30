@@ -25,7 +25,7 @@ Clic <a href="https://imgur.com/a/ut1BSN8" target="_blank">aquí</a> para ver la
 
 ### Créditos para:
 
-* Codificando el CMS para Akiled - <a href="https://github.com/DevHabbos">Kaio (*DevHabbos*)</a>
+* Codificando el CMS para Akiled - <a href="https://github.com/iKaioC">Kaio (*DevHabbos*)</a>
 * Diseño Mezz CMS - <a href="https://github.com/yilmazev">Yilmaz</a>
 * Emulador Akiled, correcciones y otros - <a href="https://github.com/Dark25">Lúcifer</a>
 
