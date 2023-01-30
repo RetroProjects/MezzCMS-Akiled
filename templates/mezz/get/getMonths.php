@@ -63,9 +63,7 @@
 ?>
 
 <style>
-a {
-  color: black;
-}
+
 
 .active {
   color: #cf8f01;
