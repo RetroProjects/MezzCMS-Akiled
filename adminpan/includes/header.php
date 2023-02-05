@@ -17,7 +17,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle"src="http://habbo.es/habbo-imaging/avatarimage?figure=<?php echo User::userData('look'); ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1" alt="">
+                    <img class="img-xs rounded-circle"src="https://imager.akiled.org/?figure=<?php echo User::userData('look'); ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1" alt="">
                     <p class="mb-0 d-none d-sm-block navbar-profile-name"> <b><?php echo User::userData('username'); ?></b></p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>

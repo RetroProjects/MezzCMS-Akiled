@@ -34,7 +34,7 @@
       <div class="background">
         <img src="<?php echo User::userData('portada'); ?>">
       </div>
-      <a href="<?php echo $config['hotelUrl']; ?>/adminpan/dash"><img class="circle" style="height: 62px;width: 62px;background-color:#4272d7;border:2px solid #FFF;" src="http://habbo.es/habbo-imaging/avatarimage?figure=<?php echo User::userData('look'); ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></a>
+      <a href="<?php echo $config['hotelUrl']; ?>/adminpan/dash"><img class="circle" style="height: 62px;width: 62px;background-color:#4272d7;border:2px solid #FFF;" src="https://imager.akiled.org/?figure=<?php echo User::userData('look'); ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></a>
       <a href="#!name"><span class="white-text name">Hola, <b><?php echo User::userData('username'); ?> <?php if(User::userData('verified') == 1){echo'<i class="fas fa-check-circle" style="color:#0277bd;font-size:16px;"></i>';}else{echo '';}?></b></span></a>
       <a href="#!email"><span class="white-text email" style="font-style: italic;"><?php echo User::userData('motto'); ?></span></a>
       <li><a class="subheader" style="color:#4272d7;">General</a></li>

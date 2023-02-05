@@ -27,7 +27,7 @@ $config['favicon'] = "http://mezz.localhost/favicon.ico"; // Favicon of your web
 $config['staffCheckHk'] = true; // Enable the staff pin in the housekeeping (true) or disable it (false) - Habilitar el pin del personal en el panel de administración (true) o deshabilitarlo (false).
 $config['staffCheckHkMinimumRank'] = 15; // Minimum staff rank to get the staff pin in the housekeeping - Rango mínimo de personal para obtener el pin de personal en el panel de administración.
 $config['maintenance'] = false; // Enable the maintenance of your website (true) or disable it (false) - Habilitar el mantenimiento de su sitio web (true) o deshabilitarlo (false).
-$config['AvatarURL'] = "http://swfs.localhost/avatar/avatarimage.php?figure="; // Avatar style when you sign up - Estilo de avatar cuando se registra.
+$config['AvatarURL'] = "https://imager.akiled.org/?figure="; // Avatar style when you sign up - Estilo de avatar cuando se registra.
 $config['userLikeEnable'] = true; // Enable user likes - Habilitar reacciones de usuario.
 $config['newsCommandEnable'] = true; // Enable news commands - Habilitar comandos de noticias.
 $config['newsCommandFilter'] = true; // Enable word filter on news commands (the filter use the db tables word filter and word filter characters) - Habilite el filtro de palabras en los comandos de noticias (el filtro usa las tablas de base de datos, el filtro de palabras y los caracteres del filtro de palabras).
@@ -46,7 +46,7 @@ $config['roomphotos'] = "http://swfs.localhost/newfoto/photos/";
 $config['badgeURL'] = "http://swfs.localhost/c_images/album1584/";
 $config['badgeURLu'] = "http://mezz.localhost/swfs/c_images/placas/";
 $hotel['swfLink'] = "http://swfs.localhost/c_images/album1584/";
-$config['lookUrl'] = "http://swfs.localhost/avatar/avatarimage.php?figure=";
+$config['lookUrl'] = "https://imager.akiled.org/?figure=";
 $config['pathswf'] = "http://swfs.localhost"; 
 
 /* Email Settings - Configuración de correo electrónico */

@@ -1,6 +1,7 @@
 
     <link rel="stylesheet" type="text/css" href="/assets/styles/app.css"  media="(prefers-color-scheme: light)">
     <link rel="stylesheet" type="text/css" href="/assets/styles/app-dark.css"  media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <div class="page-content-nav">
     <div class="page-content-max-width" style="justify-content: flex-start;">
         <div class="page-content-nav-item 

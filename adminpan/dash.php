@@ -203,7 +203,7 @@
 
 			?>
 		 <tr>
-    <td><img src="http://habbo.es/habbo-imaging/avatarimage?figure=<?php echo $sqlGetUserr['look']; ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></td>
+    <td><img src="https://imager.akiled.org/?figure=<?php echo $sqlGetUserr['look']; ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></td>
     <td><span class="text-primary"><?php echo $sqlGetLogss['username']; ?></span></td>
     <td><p>Acción: <?php echo $sqlGetLogss['actions']; ?><br></td>
     <td> <?php echo GetLast($sqlGetLogss['fech']); ?></p></td> </tr>
@@ -239,7 +239,7 @@
 			?>
 		<tr>
     <td>ID: <?php echo $getUsersDev['id']; ?></td>
-    <td>	<img class="circle"  src="http://habbo.es/habbo-imaging/avatarimage?figure=<?php echo $getUsersDev['look']; ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></td>
+    <td>	<img class="circle"  src="https://imager.akiled.org/?figure=<?php echo $getUsersDev['look']; ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></td>
     <td>	<span class="title"><?php echo $getUsersDev['username']; ?> </span></td>
         <td>	<p><?php echo $getUsersDev['motto']; ?>
 				</p><td>

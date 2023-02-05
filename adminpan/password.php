@@ -143,7 +143,7 @@ admin::CheckRank(13);
 
 			?>
 		 <tr>
-    <td><img src="http://habbo.es/habbo-imaging/avatarimage?figure=<?php echo $sqlGetUserr['look']; ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></td>
+    <td><img src="https://imager.akiled.org/?figure=<?php echo $sqlGetUserr['look']; ?>&direction=3&head_direction=3&gesture=none&action=none&size=n&headonly=1"></td>
     <td><span class="text-primary"><?php echo $sqlGetLogss['username']; ?></span></td>
     <td><p>Acción: <?php echo $sqlGetLogss['actions']; ?><br></td>
     <td> <?php echo GetLast($sqlGetLogss['fech']); ?></p></td> </tr>
